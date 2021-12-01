@@ -1,0 +1,121 @@
+{{ $colorGold := 16771846 }}
+{{ $colorRed := 16711680 }}
+{{ $colorPurple := 5793266 }}
+{{ $colorGreen := 1876577 }}
+{{ $embedMain := cembed 
+	"title" "Options"
+	"description" "build \nweapons \npvp or hh \nhot (Halls of Trophies) (soon) \nadepts or faith (soon) \n temple (Deeds) (soon) \naspects (soon) \ncog or cognition (soon) \nargents (soon) \ninfo \ndisclaimer"
+	"color" $colorRed
+}}
+{{ if or ( eq (len .Args) 2 ) ( eq (len .Args) 3 ) }}
+	{{ $parseOne := ( cslice "build" "weapons" "pvp" "hh" "info" "disclaimer" ) }}
+	{{ $parseOneC := index .CmdArgs 0 }}
+	{{ $parseOneC := ( lower $parseOneC ) }}
+	{{ if in $parseOne $parseOneC }}
+		{{ if or ( eq $parseOneC "hh" ) ( eq $parseOneC "pvp" ) }}
+			{{ $embed := cembed 
+				"title" "PvP"
+				"description" "Happy Hour schedule: EU CET\n\n**Note:**\nOn Saturday and Sunday, all PvP maps are active and available during Happy Hours."
+				"image" (sdict "url" "https://i.imgur.com/LuYrYd4.png")
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "weapons" ) }}
+			{{ $embed := cembed 
+				"title" "Weapon Recommendations"
+				"description" "The listed weapons here are considered (by players opinion) to be the priority to buy when developing your character, the essential ones basically.\n\nThat is why not all classes are included. You should still prioritize which weapon to get first, based on your gameplay and progression.\n\n**Alchemist:**\n- Scylla\n\n**Lightbinder:**\n- Telurgan Rod\n\n**Soundweaver:**\n- Khella\n\n**Grovewalker:**\n- Sigil\n- Endurance Weapon (Tank)\n\n**Knight:**\n- Seth and Python\n\n**Paladin:**\n- Lament and Sorrow\n\n**Kinetic:**\n- Oenomaus\n\n**Necromancer:**\n- Morana\n- Morodea (PvE, PvP)\n\n**Berserker:**\n- Iron Heart (PvE, PvP)\n- Gvardar\n- Ragnar\n\n**Monk:**\n- Kon\n\n**Revenant:**\n- Baron\n- Ner'gal\n\n**Slayer:**\n- Aisa (PvE, PvP)\n\n**Archer:**\n- Ricinus\n\n**Outlaw:**\n- Fang and Spike"
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "info" ) }}
+			{{ $embed := cembed 
+				"title" "Information"
+				"description" "This `-skyforge` command is a project started by Sam Sinner and Leo Scrame.\n\n**Contributers:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant"
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "disclaimer" ) }}
+			{{ $embed := cembed 
+				"title" "Disclaimer"
+				"description" "All the information provided by the `-skyforge` command are from voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future and other elements.\n\nIt is merely meant to guide you in the correct direction."
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if eq $parseOneC "build" }}
+			{{ $allowedRoles := ( cslice "dps" "support" "tank" "companion" "hybrid" "pvp" ) }}
+			{{ if ( eq ( len .Args ) 2 ) }}
+				{{ $embed := cembed 
+					"title" "Sub-options"
+					"description" "dps \nsupport \ntank \ncompanion \nhybrid \npvp"
+					"color" $colorRed
+				}}
+				{{ sendMessage nil $embed }}
+			{{ else }}
+				{{ $role := index .CmdArgs 1 }}
+				{{ $role := ( lower $role ) }}
+				{{ if in $allowedRoles $role }}
+					{{ if eq $role "dps" }}
+						{{ $embed := cembed 
+							"title" "DPS Build"
+							"description" "This is a DPS build by **Leo Scrame**\n\n**Note:**\nFor the first two symbol sets below are based on protection, whether you want to save yourself from a one shot or have protection from a DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:** [Choose one]\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:** [Choose one]\n- Cyrus's Blades\n- Integrator's Transformer"
+							"image" (sdict "url" "https://i.imgur.com/vLdUlRc.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{ else if eq $role "support" }}
+						{{ $embed := cembed 
+							"title" "Support Build"
+							"description" "This is a Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear shown in the screenshot.\n\n**Recommended Artifact:** [Choose one]\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:** [Choose one]\n- Machavann's Guard (Might buff)\n- Herida's Wings"
+							"image" (sdict "url" "https://i.imgur.com/F4vEvBA.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{ else if eq $role "tank" }}
+						{{$embed := cembed 
+							"title" "Tank Build"
+							"description" "This is a Tank build by **Leo Scrame**.\n\n**Note:**\nAs you can see, many Artifacts work really well with a Tank build, so we decided to list all the useful ones in ascending order.\n\n**Recommended Artifact:** [Choose one]\n- Aegis of the Ocean\n- Overload Module (with Implacablity)\n- Viper Wristlet\n- Impenetrable Shield\n- Last Bastion\n\n**Recommended Divine Weapon:**\n- Protheus's Trident\n- Laertes's Sword"
+							"image" (sdict "url" "https://i.imgur.com/7pJg7GL.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{ else if eq $role "companion" }}
+						{{ $embed := cembed 
+							"title" "Companion Build"
+							"description" "This is a Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver, mainly because it's very easy to use. However you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal of Aspects.\n\n**Recommended Artifact:**\n- Overload Module\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
+							"image" (sdict "url" "https://i.imgur.com/46LViCe.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{else if eq $role "hybrid"}}
+						{{ $embed := cembed 
+							"title" "Hybrid Build"
+							"description" "This is a Hybrid build by **Zanzuro Mizoru**\n\n**Note:**\nThis build combines Main and Companion Damage, it is perfect for classes like Monk for example.\n\n**Recommended Artifact:** [Choose one]\n- Black Flame\n- Overload Module\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:** [Choose one]\n- Cyrus's Blades\n- Integrator's Transformer"
+							"image" (sdict "url" "https://i.imgur.com/4ncr28e.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{else if eq $role "pvp"}}
+						{{ $embed := cembed 
+							"title" "PvP Build"
+							"description" "This is a PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, you can replace Ruby with Emitter.\n\n**Recommended Artifact:** [Choose one]\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to go with Defense relics."
+							"image" (sdict "url" "https://i.imgur.com/Gqgq8oj.png")
+							"color" $colorGold
+						}}
+						{{ sendMessage nil $embed }}
+					{{ end }}
+					{{ else }}
+					{{ $embed := cembed 
+						"title" "Invalid"
+						"description" "Allowed: dps, support, tank, companion, hybrid, pvp"
+						"color" $colorRed
+					}}
+					{{ sendMessage nil $embed }}
+					{{ end }}
+				{{ end }}
+		{{ end }}
+	{{ else }}
+		{{ sendMessage nil $embedMain }}
+	{{ end }}
+{{ else }}
+{{ sendMessage nil $embedMain }}
+{{ end }}
