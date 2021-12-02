@@ -1,52 +1,84 @@
-{{ $colorGold := 16771846 }}
-{{ $colorRed := 16711680 }}
-{{ $colorPurple := 5793266 }}
-{{ $colorGreen := 1876577 }}
+{{$colorGold := 16771846}}
+{{$colorRed := 16711680}}
 {{ $embedMain := cembed 
 	"title" "Options"
-	"description" "build \nweapons \npvp or hh \nhot (Halls of Trophies) (soon) \nadepts or faith (soon) \n temple (Deeds) (soon) \naspects (soon) \ncog or cognition (soon) \nargents (soon) \ninfo \ndisclaimer"
+	"description" "build \nweapons \nadepts \naspects \ncog or cognition \ntips \nargents \npvp \ninfo \ndisclaimer"
 	"color" $colorRed
 }}
 {{ if or ( eq (len .Args) 2 ) ( eq (len .Args) 3 ) }}
-	{{ $parseOne := ( cslice "build" "weapons" "pvp" "hh" "info" "disclaimer" ) }}
+	{{ $parseOne := ( cslice "build" "weapons" "adepts" "aspects" "cog" "cognition" "tips" "argents" "pvp" "info" "disclaimer" ) }}
 	{{ $parseOneC := index .CmdArgs 0 }}
 	{{ $parseOneC := ( lower $parseOneC ) }}
 	{{ if in $parseOne $parseOneC }}
-		{{ if or ( eq $parseOneC "hh" ) ( eq $parseOneC "pvp" ) }}
-			{{ $embed := cembed 
-				"title" "PvP"
-				"description" "Happy Hour schedule: EU CET\n\n**Note:**\nOn Saturday and Sunday, all PvP maps are active and available during Happy Hours."
-				"image" (sdict "url" "https://i.imgur.com/LuYrYd4.png")
+		{{ if ( eq $parseOneC "pvp" ) }}
+			{{ $embedPvP := cembed 
+				"title" "PvP EU (CET) & NA (PST)"
+				"image" (sdict "url" "https://i.imgur.com/QDqUvJA.jpeg")
 				"color" $colorGold
 			}}
-			{{ sendMessage nil $embed }}
+			{{ sendMessage nil $embedPvP }}
 		{{ else if ( eq $parseOneC "weapons" ) }}
 			{{ $embed := cembed 
 				"title" "Weapon Recommendations"
-				"description" "The listed weapons here are considered (by players opinion) to be the priority to buy when developing your character, the essential ones basically.\n\nThat is why not all classes are included. You should still prioritize which weapon to get first, based on your gameplay and progression.\n\n**Alchemist:**\n- Scylla\n\n**Lightbinder:**\n- Telurgan Rod\n\n**Soundweaver:**\n- Khella\n\n**Grovewalker:**\n- Sigil\n- Endurance Weapon (Tank)\n\n**Knight:**\n- Seth and Python\n\n**Paladin:**\n- Lament and Sorrow\n\n**Kinetic:**\n- Oenomaus\n\n**Necromancer:**\n- Morana\n- Morodea (PvE, PvP)\n\n**Berserker:**\n- Iron Heart (PvE, PvP)\n- Gvardar\n- Ragnar\n\n**Monk:**\n- Kon\n\n**Revenant:**\n- Baron\n- Ner'gal\n\n**Slayer:**\n- Aisa (PvE, PvP)\n\n**Archer:**\n- Ricinus\n\n**Outlaw:**\n- Fang and Spike"
+				"description" "Listed weapons are considered (players opinion) to be priority, the essential ones.\n\nThat is why not all classes are listed. You should still prioritize which weapon to get first.\n\n**Alchemist:**\n- Scylla\n\n**Lightbinder:**\n- Telurgan Rod\n\n**Soundweaver:**\n- Khella\n\n**Grovewalker:**\n- Sigil\n- Endurance Weapon (Tank)\n\n**Knight:**\n- Seth and Python\n\n**Paladin:**\n- Lament and Sorrow\n\n**Kinetic:**\n- Oenomaus\n\n**Necromancer:**\n- Morana\n- Morodea (PvE, PvP)\n\n**Berserker:**\n- Iron Heart (PvE, PvP)\n- Gvardar\n- Ragnar\n\n**Monk:**\n- Kon\n\n**Revenant:**\n- Baron\n- Ner'gal\n\n**Slayer:**\n- Aisa (PvE, PvP)\n\n**Archer:**\n- Ricinus\n\n**Outlaw:**\n- Fang and Spike"
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "adepts" ) }}
+			{{ $embed := cembed 
+				"title" "Adepts (Faith)"
+				"description" "\n- Never cancel a journey to collect rewards, wait for it to finish.\n- Add 'Charisma' & 'Constitution' relics for max faith return.\n- Send Adepts on journey always.\n- 8 adepts are allowed, dismiss the extra one for faith.\n- Always keep adepts with higher stats."
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "tips" ) }}
+			{{ $embed := cembed 
+				"title" "General Tips"
+				"description" "**Which class to unlock first?**\nPlayers recommend using Grovewalker, Firestarter or Revenant while leveling.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Artifact (ie: Vulnerability Detector)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "aspects" ) }}
+			{{ $embed := cembed 
+				"title" "Aspect Forms"
+				"description" "Aspects: Tenacity, Rage, Mercy, Magic, Vengeance.\n\nAt first, you have 3 aspects unlocked (Tenacity, Rage, Mercy). To unlock the remaining Aspects you need to clear Champion Avatar twice.\n\n**Aspect Priority:**\nEach Aspect takes time, to fully develop all 5 Aspects you need 3.1 million Cognition total.\n\nFor that reason, players recommend to prioritize.\n\n**First Priority: Mercy**\nThis is probably the only agreed upon fact when developing Aspects, to work on Mercy first. The gold node brings huge advantages, most important: Elixirs. They allow you to use your Aspect Form for free.\n\n**After Mercy:**\nThere are many theories on what to prioritize next, it will mostly depend on your gameplay. We highly recommend checking each Aspect gold node to help you decide."
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if or ( eq $parseOneC "cog" ) ( eq $parseOneC "cognition" ) }}
+			{{ $embed := cembed 
+				"title" "Cognition"
+				"description" "Cognition is the currency used to develop your Aspects.\n\n**How to earn Cognition:**\n- Directive rewards.\n- Finishing Training and Champion Avatar, Distortions.\n- Killing invaded region bosses (Event).\n- Participating in Pantheon Wars battles.\n\n**Notes:**\n- Fully developing each Aspect (Gold Node), will increase the amount of Cognition you earn.\n- Having 'Seal of Deeds' active in your Cathedral increases the amount of Cognition you earn from killing invaded region bosses."
+				"color" $colorGold
+			}}
+			{{ sendMessage nil $embed }}
+		{{ else if ( eq $parseOneC "argents" ) }}
+			{{ $embed := cembed 
+				"title" "Argents"
+				"description" "Argents is the premium currency used in Skyforge to buy legendary weapons, styles, mounts and so on.\n\n**How to get Argents:**\n- Being top 50% in daily operations. (Resets every 2 weeks)\n- Reward for finishing the gold directive of Training Avatar.\n- Participating in Inghar.\n- Participating in Pantheon Wars.\n- Buying Argents packs for money."
 				"color" $colorGold
 			}}
 			{{ sendMessage nil $embed }}
 		{{ else if ( eq $parseOneC "info" ) }}
 			{{ $embed := cembed 
 				"title" "Information"
-				"description" "This `-skyforge` command is a project started by Sam Sinner and Leo Scrame.\n\n**Contributers:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant"
+				"description" "`-skyforge` is a project started by Sam Sinner and Leo Scrame.\n\n**Contributers:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant"
 				"color" $colorGold
 			}}
 			{{ sendMessage nil $embed }}
 		{{ else if ( eq $parseOneC "disclaimer" ) }}
 			{{ $embed := cembed 
 				"title" "Disclaimer"
-				"description" "All the information provided by the `-skyforge` command are from voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future and other elements.\n\nIt is merely meant to guide you in the correct direction."
+				"description" "All the information provided by `-skyforge` are voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future.\n\nIt is merely meant to guide you in the correct direction."
 				"color" $colorGold
 			}}
 			{{ sendMessage nil $embed }}
 		{{ else if eq $parseOneC "build" }}
-			{{ $allowedRoles := ( cslice "dps" "support" "tank" "companion" "hybrid" "pvp" ) }}
+			{{ $allowedRoles := ( cslice "dps" "support" "tank" "companion" "pvp" ) }}
 			{{ if ( eq ( len .Args ) 2 ) }}
 				{{ $embed := cembed 
 					"title" "Sub-options"
-					"description" "dps \nsupport \ntank \ncompanion \nhybrid \npvp"
+					"description" "dps \nsupport \ntank \ncompanion \npvp"
 					"color" $colorRed
 				}}
 				{{ sendMessage nil $embed }}
@@ -57,7 +89,7 @@
 					{{ if eq $role "dps" }}
 						{{ $embed := cembed 
 							"title" "DPS Build"
-							"description" "This is a DPS build by **Leo Scrame**\n\n**Note:**\nFor the first two symbol sets below are based on protection, whether you want to save yourself from a one shot or have protection from a DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:** [Choose one]\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:** [Choose one]\n- Cyrus's Blades\n- Integrator's Transformer"
+							"description" "DPS build by **Leo Scrame**\n\n**Note:**\nThe first two symbol sets below are based on protection, whether you want to save you from a one shot or have protection from DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:**\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades\n- Integrator's Transformer"
 							"image" (sdict "url" "https://i.imgur.com/vLdUlRc.png")
 							"color" $colorGold
 						}}
@@ -65,7 +97,7 @@
 					{{ else if eq $role "support" }}
 						{{ $embed := cembed 
 							"title" "Support Build"
-							"description" "This is a Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear shown in the screenshot.\n\n**Recommended Artifact:** [Choose one]\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:** [Choose one]\n- Machavann's Guard (Might buff)\n- Herida's Wings"
+							"description" "Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear.\n\nThe stat 'Divine Weapon Cooldown' should be replaced with 'Max Stamina' or 'Barrier' for an optimal build.\n\n**Recommended Artifact:**\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:**\n- Machavann's Guard (Might buff)\n- Herida's Wings"
 							"image" (sdict "url" "https://i.imgur.com/F4vEvBA.png")
 							"color" $colorGold
 						}}
@@ -73,7 +105,7 @@
 					{{ else if eq $role "tank" }}
 						{{$embed := cembed 
 							"title" "Tank Build"
-							"description" "This is a Tank build by **Leo Scrame**.\n\n**Note:**\nAs you can see, many Artifacts work really well with a Tank build, so we decided to list all the useful ones in ascending order.\n\n**Recommended Artifact:** [Choose one]\n- Aegis of the Ocean\n- Overload Module (with Implacablity)\n- Viper Wristlet\n- Impenetrable Shield\n- Last Bastion\n\n**Recommended Divine Weapon:**\n- Protheus's Trident\n- Laertes's Sword"
+							"description" "Tank build by **Leo Scrame**.\n\n**Note:**\nMany Artifacts work well with a Tank build, so we decided to list all the useful ones in order.\n\n**Recommended Artifact:**\n- Aegis of the Ocean\n- Overload Module (with Implacablity)\n- Viper Wristlet\n- Impenetrable Shield\n\n**Recommended Divine Weapon:**\n- Protheus's Trident\n- Laertes's Sword"
 							"image" (sdict "url" "https://i.imgur.com/7pJg7GL.png")
 							"color" $colorGold
 						}}
@@ -81,23 +113,15 @@
 					{{ else if eq $role "companion" }}
 						{{ $embed := cembed 
 							"title" "Companion Build"
-							"description" "This is a Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver, mainly because it's very easy to use. However you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal of Aspects.\n\n**Recommended Artifact:**\n- Overload Module\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
+							"description" "Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver. However you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal.\n\n**Recommended Artifact:**\n- Overload Module\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
 							"image" (sdict "url" "https://i.imgur.com/46LViCe.png")
-							"color" $colorGold
-						}}
-						{{ sendMessage nil $embed }}
-					{{else if eq $role "hybrid"}}
-						{{ $embed := cembed 
-							"title" "Hybrid Build"
-							"description" "This is a Hybrid build by **Zanzuro Mizoru**\n\n**Note:**\nThis build combines Main and Companion Damage, it is perfect for classes like Monk for example.\n\n**Recommended Artifact:** [Choose one]\n- Black Flame\n- Overload Module\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:** [Choose one]\n- Cyrus's Blades\n- Integrator's Transformer"
-							"image" (sdict "url" "https://i.imgur.com/4ncr28e.png")
 							"color" $colorGold
 						}}
 						{{ sendMessage nil $embed }}
 					{{else if eq $role "pvp"}}
 						{{ $embed := cembed 
 							"title" "PvP Build"
-							"description" "This is a PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, you can replace Ruby with Emitter.\n\n**Recommended Artifact:** [Choose one]\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to go with Defense relics."
+							"description" "PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, replace Ruby with Emitter.\n\n**Recommended Artifact:**\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to go with Defense relics."
 							"image" (sdict "url" "https://i.imgur.com/Gqgq8oj.png")
 							"color" $colorGold
 						}}
@@ -106,7 +130,7 @@
 					{{ else }}
 					{{ $embed := cembed 
 						"title" "Invalid"
-						"description" "Allowed: dps, support, tank, companion, hybrid, pvp"
+						"description" "Allowed: dps, support, tank, companion, pvp"
 						"color" $colorRed
 					}}
 					{{ sendMessage nil $embed }}
@@ -116,6 +140,6 @@
 	{{ else }}
 		{{ sendMessage nil $embedMain }}
 	{{ end }}
-{{ else }}
+{{else}}
 {{ sendMessage nil $embedMain }}
-{{ end }}
+{{end}}
