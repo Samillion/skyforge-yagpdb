@@ -9,17 +9,7 @@
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 22. Kiss my ass, Laama! */}}
 {{ if or (ne $day "Saturday") ( ne $day "Sunday" ) }}
 	{{ if and ( ge $hour 22 ) ( le $hour 23 ) }}
-		{{ if ( eq $day "Monday" ) }}
-			{{ $day = "Tuesday" }}
-		{{ else if ( eq $day "Tuesday" ) }}
-			{{ $day = "Wednesday" }}
-		{{ else if ( eq $day "Wednesday" ) }}
-			{{ $day = "Thursday" }}
-		{{ else if ( eq $day "Thursday" ) }}
-			{{ $day = "Friday" }}
-		{{ else if ( eq $day "Friday" ) }}
-			{{ $day = "Saturday" }}
-		{{ end }}
+		{{ $day = ( $time.AddDate 0 0 1 ).Weekday }}
 		{{ $hour = 14 }}
 		{{ $post = true }}
 	{{ end }}
@@ -28,7 +18,7 @@
 	{{ $hour = 14 }}
 	{{ $post = true }}
 {{ end }}
-{{ if or ( eq $day "Saturday" ) ( eq $day "Sunday" ) }}
+{{ if or ( eq $day "Saturday" "Sunday" ) }}
         {{ $out = "All" }}
         {{ $post = true }}
 {{ else if and ( le $hour 14 ) ( lt $hour 17 ) }}
