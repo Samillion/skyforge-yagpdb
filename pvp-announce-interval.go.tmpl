@@ -5,7 +5,12 @@
 {{ $time := currentTime.In $location }}
 {{ $hour := ( toInt ( $time.Format "15" ) ) }}
 {{ $day := ( $time.Format "Monday" ) }}
-{{ if ( eq $hour 14 ) }}
+{{ if or ( eq $day "Saturday" ) ( eq $day "Sunday" ) }}
+	{{ if or ( eq $hour 14 ) ( eq $hour 17 ) ( eq $hour 20 ) }}
+		{{ $out = "All" }}
+		{{ $post = true }}
+	{{ end }}
+{{ else if ( eq $hour 14 ) }}
 	{{ if ( eq $day "Monday" ) }}
 		{{ $out = "10v10" }}
 	{{ else if ( eq $day "Tuesday" ) }}
@@ -44,14 +49,9 @@
 		{{ $out = "10v10" }}
 	{{ end }}
 	{{ $post = true }}
-{{ else if or ( eq $day "Saturday" ) ( eq $day "Sunday" ) }}
-	{{ if or ( eq $hour 14 ) ( eq $hour 17 ) ( eq $hour 20 ) }}
-		{{ $out = "All" }}
-		{{ $post = true }}
-	{{ end }}
 {{ else }}
 	{{ $out = "Not set" }}
 {{ end }}
 {{ if $post }}
-**Skyforge:** Immortals, it is PvP Happy Hour now. Active map: **{{ $out }}**.
+**Skyforge:** Immortals, it is PvP Happy Hour now. Active map: **{{ ( $out ) }}**.
 {{ end }}
