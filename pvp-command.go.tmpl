@@ -23,6 +23,10 @@
 		{{ $hour = 14 }}
 		{{ $post = true }}
 	{{ end }}
+{{ else if and ( eq $day "Sunday" ) ( ge $hour 22 ) ( le $hour 23 ) }}
+	{{ $day = "Monday" }}
+	{{ $hour = 14 }}
+	{{ $post = true }}
 {{ end }}
 {{ if or ( eq $day "Saturday" ) ( eq $day "Sunday" ) }}
         {{ $out = "All" }}
