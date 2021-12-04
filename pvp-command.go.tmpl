@@ -1,31 +1,35 @@
+{{/* Change EU to NA for PST instead of CET */}}
+{{ $region := "EU" }}
+{{/*
+	A -pvp custom command for YAGPDB to display PvP happy hour times and next active map
+	Trigger type: command
+	Trigger: -pvp
+	
+	Author: Sam Sinner
+*/}}
+{{/* Don't edit code beyond this point or do at your responsibility */}}
 {{ $colorPurple := 5793266 }}
 {{ $out := "Void" }}
 {{ $post := false }}
 {{ $tz := "Europe/Berlin" }}
+{{ $showTz := "CET" }}
+{{ if ( eq ( lower $region ) "na" ) }}
+	{{ $tz = "US/Pacific" }}
+	{{ $showTz = "PST" }}
+{{ end }}
 {{ $location := (newDate 0 0 0 0 0 0 $tz).Location }}
 {{ $time := currentTime.In $location }}
 {{ $hour := ( toInt ( $time.Format "15" ) ) }}
 {{ $day := ( $time.Format "Monday" ) }}
 {{ $at := 0 }}
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
-{{ if and ( eq $day "Saturday" ) ( ge $hour 21 ) ( le $hour 23 ) }}
-	{{ $day = "Saturday" }}
+{{ if and ( ge $hour 21 ) ( le $hour 23 ) }}
+	{{ $day = ( $time.AddDate 0 0 1 ).Weekday.String }}
 	{{ $hour = 14 }}
 	{{ $at = 14 }}
 	{{ $post = true }}
-{{ else if and ( eq $day "Sunday" ) ( ge $hour 21 ) ( le $hour 23 ) }}
-	{{ $day = "Monday" }}
-	{{ $hour = 14 }}
-	{{ $at = 14 }}
-	{{ $post = true }}
-{{ else if or (ne $day "Saturday") ( ne $day "Sunday" ) }}
-	{{ if and ( ge $hour 22 ) ( le $hour 23 ) }}
-		{{ $day = ( $time.AddDate 0 0 1 ).Weekday }}
-		{{ $hour = 14 }}
-		{{ $at = 14 }}
-		{{ $post = true }}
-	{{ end }}
 {{ end }}
+{{/* Boring and lazy logic to determine map type */}}
 {{ if ( eq $day "Saturday" "Sunday" ) }}
 		{{ if and ( le $hour 14 ) ( lt $hour 17 ) }}
 			{{ $at = 14 }}
@@ -82,7 +86,7 @@
     {{ $out = "Not set" }}
 {{ end }}
 {{ if $post }}
-	{{ $descP := ( joinStr "" "Next active map type: **" $out "** at **" $at ":00 CET**." ) }}
+	{{ $descP := ( joinStr "" "Next active map type: **" $out "** at **" $at ":00 " $showTz "**." ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
 		"description" $descP
