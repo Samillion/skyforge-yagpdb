@@ -7,19 +7,24 @@
 {{ $hour := ( toInt ( $time.Format "15" ) ) }}
 {{ $day := ( $time.Format "Monday" ) }}
 {{ $at := 0 }}
-{{/* Trick bot to think it's tomorrow noon if current hour is more than 22. Kiss my ass, Laama! */}}
-{{ if or (ne $day "Saturday") ( ne $day "Sunday" ) }}
+{{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
+{{ if and ( eq $day "Saturday" ) ( ge $hour 21 ) ( le $hour 23 ) }}
+	{{ $day = "Saturday" }}
+	{{ $hour = 14 }}
+	{{ $at = 14 }}
+	{{ $post = true }}
+{{ else if and ( eq $day "Sunday" ) ( ge $hour 21 ) ( le $hour 23 ) }}
+	{{ $day = "Monday" }}
+	{{ $hour = 14 }}
+	{{ $at = 14 }}
+	{{ $post = true }}
+{{ else if or (ne $day "Saturday") ( ne $day "Sunday" ) }}
 	{{ if and ( ge $hour 22 ) ( le $hour 23 ) }}
 		{{ $day = ( $time.AddDate 0 0 1 ).Weekday }}
 		{{ $hour = 14 }}
 		{{ $at = 14 }}
 		{{ $post = true }}
 	{{ end }}
-{{ else if and ( eq $day "Sunday" ) ( ge $hour 22 ) ( le $hour 23 ) }}
-	{{ $day = "Monday" }}
-	{{ $hour = 14 }}
-	{{ $at = 14 }}
-	{{ $post = true }}
 {{ end }}
 {{ if ( eq $day "Saturday" "Sunday" ) }}
 		{{ if and ( le $hour 14 ) ( lt $hour 17 ) }}
