@@ -5,7 +5,7 @@
 	"description" "build \nweapons \nadepts \naspects \ncog or cognition \ntips \nargents \npvp \ninfo \ndisclaimer"
 	"color" $colorRed
 }}
-{{ if or ( eq (len .Args) 2 3 ) }}
+{{ if ( eq (len .Args) 2 3 ) }}
 	{{ $parseOne := ( cslice "build" "weapons" "adepts" "aspects" "cog" "cognition" "tips" "argents" "pvp" "info" "disclaimer" ) }}
 	{{ $parseOneC := index .CmdArgs 0 }}
 	{{ $parseOneC := ( lower $parseOneC ) }}
