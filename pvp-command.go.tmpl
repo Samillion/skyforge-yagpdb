@@ -6,19 +6,29 @@
 {{ $time := currentTime.In $location }}
 {{ $hour := ( toInt ( $time.Format "15" ) ) }}
 {{ $day := ( $time.Format "Monday" ) }}
+{{ $at := 0 }}
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 22. Kiss my ass, Laama! */}}
 {{ if or (ne $day "Saturday") ( ne $day "Sunday" ) }}
 	{{ if and ( ge $hour 22 ) ( le $hour 23 ) }}
 		{{ $day = ( $time.AddDate 0 0 1 ).Weekday }}
 		{{ $hour = 14 }}
+		{{ $at = 14 }}
 		{{ $post = true }}
 	{{ end }}
 {{ else if and ( eq $day "Sunday" ) ( ge $hour 22 ) ( le $hour 23 ) }}
 	{{ $day = "Monday" }}
 	{{ $hour = 14 }}
+	{{ $at = 14 }}
 	{{ $post = true }}
 {{ end }}
-{{ if or ( eq $day "Saturday" "Sunday" ) }}
+{{ if ( eq $day "Saturday" "Sunday" ) }}
+		{{ if and ( le $hour 14 ) ( lt $hour 17 ) }}
+			{{ $at = 14 }}
+		{{ else if and ( le $hour 17 ) ( lt $hour 20 ) }}
+			{{ $at = 17 }}
+		{{ else if and ( le $hour 20 ) ( gt $hour 17 ) }}
+			{{ $at = 20 }}
+		{{ end }}
         {{ $out = "All" }}
         {{ $post = true }}
 {{ else if and ( le $hour 14 ) ( lt $hour 17 ) }}
@@ -33,6 +43,7 @@
     {{ else if ( eq $day "Friday" ) }}
         {{ $out = "3v3" }}
     {{ end }}
+	{{ $at = 14 }}
     {{ $post = true }}
 {{ else if and ( le $hour 17 ) ( lt $hour 20 ) }}
     {{ if ( eq $day "Monday" ) }}
@@ -46,6 +57,7 @@
     {{ else if ( eq $day "Friday" ) }}
         {{ $out = "5v5" }}
     {{ end }}
+	{{ $at = 17 }}
     {{ $post = true }}
 {{ else if and ( le $hour 20 ) ( gt $hour 17 ) }}
     {{ if ( eq $day "Monday" ) }}
@@ -59,12 +71,13 @@
     {{ else if ( eq $day "Friday" ) }}
         {{ $out = "10v10" }}
     {{ end }}
+	{{ $at = 20 }}
     {{ $post = true }}
 {{ else }}
     {{ $out = "Not set" }}
 {{ end }}
 {{ if $post }}
-	{{ $descP := ( joinStr "" "Next active map during happy hours: **" $out "**." ) }}
+	{{ $descP := ( joinStr "" "Next active map type: **" $out "** at **" $at ":00 CET**." ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
 		"description" $descP
