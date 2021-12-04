@@ -5,7 +5,7 @@
 	"description" "build \nweapons \nadepts \naspects \ncog or cognition \ntips \nargents \npvp \ninfo \ndisclaimer"
 	"color" $colorRed
 }}
-{{ if or ( eq (len .Args) 2 ) ( eq (len .Args) 3 ) }}
+{{ if or ( eq (len .Args) 2 3 ) }}
 	{{ $parseOne := ( cslice "build" "weapons" "adepts" "aspects" "cog" "cognition" "tips" "argents" "pvp" "info" "disclaimer" ) }}
 	{{ $parseOneC := index .CmdArgs 0 }}
 	{{ $parseOneC := ( lower $parseOneC ) }}
@@ -45,7 +45,7 @@
 				"color" $colorGold
 			}}
 			{{ sendMessage nil $embed }}
-		{{ else if or ( eq $parseOneC "cog" ) ( eq $parseOneC "cognition" ) }}
+		{{ else if ( eq $parseOneC "cog" "cognition" ) }}
 			{{ $embed := cembed 
 				"title" "Cognition"
 				"description" "Cognition is the currency used to develop your Aspects.\n\n**How to earn Cognition:**\n- Directive rewards.\n- Finishing Training and Champion Avatar, Distortions.\n- Killing invaded region bosses (Event).\n- Participating in Pantheon Wars battles.\n\n**Notes:**\n- Fully developing each Aspect (Gold Node), will increase the amount of Cognition you earn.\n- Having 'Seal of Deeds' active in your Cathedral increases the amount of Cognition you earn from killing invaded region bosses."
