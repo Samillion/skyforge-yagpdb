@@ -27,14 +27,14 @@
 		{{else if eq $skyArg "adepts"}}
 			{{$embed := cembed 
 				"title" "Adepts (Faith)"
-				"description" "- Never cancel a journey to collect rewards.\n- Add Charisma & Constitution relics for max faith return.\n- Send Adepts on journey always.\n- Only 8 adepts are allowed, dismiss the extra for faith.\n- Always keep adepts with higher stats.\n\n**Notes:**\n- Having more than 8 adepts reduces faith gain by 50%.\n- Last 25% of journey brings a high return of faith."
+				"description" "- Never cancel a journey to collect rewards.\n- Add Charisma & Constitution relics for max faith return.\n- Send Adepts on journey always.\n- Only 8 adepts are allowed.\n- Always keep adepts with higher stats.\n\n**Notes:**\n- Having more than 8 adepts reduces faith gain by 50%.\n- Last 25% of journey brings a high return of faith.\n- Adept stats will increase the longer you keep them."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "tips"}}
 			{{ $embed := cembed 
 				"title" "General Tips"
-				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Artifact (ie: Vulnerability Detector)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
+				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
@@ -62,7 +62,7 @@
 		{{else if eq $skyArg "disclaimer"}}
 			{{$embed := cembed 
 				"title" "Disclaimer"
-				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant"
+				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char"
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
@@ -82,7 +82,7 @@
 					{{if eq $role "dps"}}
 						{{$embed := cembed 
 							"title" "DPS Build"
-							"description" "DPS build by **Leo Scrame**\n\n**Note:**\nThe first two symbol sets below are based on protection, whether you want to save you from a one shot or have protection from DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:**\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to either balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades\n- Integrator's Transformer"
+							"description" "DPS build by **Leo Scrame**\n\n**Note:**\nThe first two symbol sets below are based on protection, whether you want to save you from a one shot or have protection from DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:**\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:**\n- Nerion's Hammer\n- Cyrus's Blades\n- Integrator's Transformer"
 							"image" (sdict "url" "https://i.imgur.com/vLdUlRc.png")
 							"color" $colorGold
 						}}
