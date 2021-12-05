@@ -56,7 +56,7 @@ Click on "Save" and done! That's it. Try it on your Discord server with `-skyfor
 
 Here is a preview of the command `-skyforge`:
 
-![skyforge-command](https://i.imgur.com/IT1OEyy.jpeg)
+![skyforge-command](https://i.imgur.com/zZS1y2P.jpeg)
 
 # PvP Command
 This command will output data relevant to PvP Happy Hours, schedule and active maps with the following options:
@@ -83,7 +83,7 @@ Click on "Save" and done! That's it. Try it on your Discord server with `-pvp`
 
 Here is a preview of the command `-pvp`:
 
-![pvp-command-demo](https://i.imgur.com/odZEIA9.jpeg)
+![pvp-command-demo](https://i.imgur.com/gKG1Iwb.jpeg)
 
 ### IMPORTANT (for PvP Command)
 If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
@@ -143,6 +143,7 @@ This project was started by Sam Sinner and Leo Scrame.
 - Zanzuro Mizoru
 - Reinna Sigma
 - Istani Revenant
+- Nova Char
 
 # License
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
