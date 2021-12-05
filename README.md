@@ -49,7 +49,7 @@ Choose the following options:
 - Trigger type: command
 - Trigger: skyforge
 
-Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/skyforge-command.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
+Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/skyforge-command.go), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
 ![skyforge-dashboard](https://i.imgur.com/HXHfqQE.jpeg)
 
@@ -76,7 +76,7 @@ Choose the following options:
 - Trigger type: command
 - Trigger: pvp
 
-Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-command.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
+Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-command.go), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
 ![pvp-dashboard](https://i.imgur.com/rA28yr6.jpeg)
 
@@ -107,7 +107,7 @@ Choose the following options:
 - Interval: 1
 - Channel: [Choose the channel you would like the bot to announce Happy Hours in]
 
-Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-announce-interval.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
+Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-announce-interval.go), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
 ![pvp-announce-dashboard](https://i.imgur.com/HcQDlRG.jpeg)
 
