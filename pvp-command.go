@@ -1,14 +1,4 @@
-{{/* Change EU to NA for PST instead of CET */}}
 {{ $region := "EU" }}
-{{/*
-	A -pvp custom command for YAGPDB to display PvP happy hours and next active map
-	Trigger type: command
-	Trigger: pvp
-	
-	Options: -pvp next
-	Author: Sam Sinner
-*/}}
-{{/* Don't edit code beyond this point or do at your responsibility */}}
 {{ $colorPurple := 5793266 }}
 {{ $out := "Void" }}
 {{ $post := false }}
@@ -17,6 +7,9 @@
 {{ if ( eq ( lower $region ) "na" ) }}
 	{{ $tz = "US/Pacific" }}
 	{{ $showTz = "PST" }}
+{{ else }}
+	{{ $tz = "Europe/Berlin" }}
+	{{ $showTz = "CET" }}
 {{ end }}
 {{ $location := (newDate 0 0 0 0 0 0 $tz).Location }}
 {{ $time := currentTime.In $location }}
