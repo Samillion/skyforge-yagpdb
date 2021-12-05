@@ -20,13 +20,13 @@ Choose the following options:
 
 Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/skyforge-command.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
-![skyforge-dashboard](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/skyforge-dashboard-command.jpg?token=AEE6UZV356RSNMGIGOSHYM3BVQBCM)
+![skyforge-dashboard](https://i.imgur.com/HXHfqQE.jpeg)
 
 Click on "Save" and done! That's it. Try it on your Discord server with `-skyforge`
 
 Here is a preview of the command `-skyforge`:
 
-![skyforge-command](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/skyforge-command-demo.jpg?token=AEE6UZXLSJLUUC7IL576SPLBVQCT6)
+![skyforge-command](https://i.imgur.com/IT1OEyy.jpeg)
 
 # PvP Command
 To install this custom command:
@@ -41,13 +41,13 @@ Choose the following options:
 
 Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-command.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
-![pvp-dashboard](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/pvp-dashboard-command.jpg?token=AEE6UZVOBIQ4PUAE337KH4TBVQBR6)
+![pvp-dashboard](https://i.imgur.com/rA28yr6.jpeg)
 
 Click on "Save" and done! That's it. Try it on your Discord server with `-pvp`
 
 Here is a preview of the command `-pvp`:
 
-![pvp-command-demo](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/pvp-command-demo.jpg?token=AEE6UZRWDCGZZ64IWRPOWIDBVQCAA)
+![pvp-command-demo](https://i.imgur.com/odZEIA9.jpeg)
 
 ### IMPORTANT (for PvP Command)
 If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
@@ -70,13 +70,13 @@ Choose the following options:
 
 Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-announce-interval.go.tmpl), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
-![pvp-announce-dashboard](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/pvp-announce-dashboard.jpg?token=AEE6UZSIVLNJ4UMXXC3HHLDBVQDVQ)
+![pvp-announce-dashboard](https://i.imgur.com/HcQDlRG.jpeg)
 
 Click on "Save" and done!
 
 Here is a preview of the PvP Auto Announce command:
 
-![pvp-announce-demo](https://raw.githubusercontent.com/Samillion/skyforge-yagpdb/main/previews/pvp-autoannounce-demo.jpg?token=AEE6UZTWFSGCMNXLQXPGEFDBVQGBY)
+![pvp-announce-demo](https://i.imgur.com/nccwol4.jpeg)
 
 ### IMPORTANT (for PvP Auto Announce)
 If you would like the bot to announce it for NA region times, in the first lines of the code change `Europe/Berlin` to `US/Pacific`.
