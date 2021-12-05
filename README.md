@@ -33,7 +33,6 @@ This command will output the relevant data about the MMO game Skyforge with the 
 -skyforge ether
 -skyforge aspects
 -skyforge cog
--skyforge cognition
 -skyforge tips
 -skyforge argents
 -skyforge disclaimer
