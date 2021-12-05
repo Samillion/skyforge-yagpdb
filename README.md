@@ -8,11 +8,11 @@ I've created custom commands that will provide useful information on Discord abo
 To use any of the commands here, first you'll need to add [YAGPDB bot](https://yagpdb.xyz/) to your Discord server. They provide detailed documentation on how to get started with the bot [here](https://docs.yagpdb.xyz/getting-started).
 
 ### Important
-All the infromation you'd need to install and run these commands are listed bellow, but please make sure to read each segment **fully and thoroughly** before adding any of the commands to your Discord server.
+All the infromation you'd need to install and run these commands are listed below, but please make sure to read each segment **fully and thoroughly** before adding any of the commands to your Discord server.
 
 # Skyforge Command
 To install this custom command:
-- Login to your YAGPDB Dashbord. ([Here](https://yagpdb.xyz/manage))
+- Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
 - Go to "Ungrouped" tab or create a new Group if you'd like this command to be used by specific roles only.
 - Click on "Create a new Custom Command".
@@ -33,7 +33,7 @@ Here is a preview of the command `-skyforge`:
 
 # PvP Command
 To install this custom command:
-- Login to your YAGPDB Dashbord. ([Here](https://yagpdb.xyz/manage))
+- Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
 - Go to "Ungrouped" tab or create a new Group if you'd like this command to be used by specific roles only.
 - Click on "Create a new Custom Command".
@@ -62,7 +62,7 @@ So the result would be:
 
 # PvP Auto Announce
 To install this custom command:
-- Login to your YAGPDB Dashbord. ([Here](https://yagpdb.xyz/manage))
+- Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
 - Click on "Create a new Custom Command".
 
@@ -91,7 +91,7 @@ So the result would be:
 
 [Only once] You ***have to*** save or run this command at the beginning of any hour of the day, otherwise the announcements won't be accurate later on.
 
-This is a limitatation of YAGPDB not having the option to control when exactly you can run the command. So for example, if you save it on `4:35:20 PM`, the script will check every hour on `X:35:20` and that will mean Happy Hour announcements will be late as well.
+This is a limitation of YAGPDB not having the option to control when exactly you can run the command. So for example, if you save it on `4:35:20 PM`, the command will check every hour on `X:35:20` and that will mean Happy Hour announcements will be late as well.
 
 So at any hour of the day, just save or run the command at `HH:00:00` so that it would run at the start of every hour.
 
@@ -100,7 +100,7 @@ All the information provided by `-skyforge` is voluntary effort, not official. I
 
 This project was started by Sam Sinner and Leo Scrame.
 
-**Contributers:**
+**Contributors:**
 - Laama Laamanen
 - Zanzuro Mizoru
 - Reinna Sigma
