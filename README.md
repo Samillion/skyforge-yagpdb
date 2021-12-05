@@ -20,6 +20,25 @@ To use any of the commands here, first you'll need to add [YAGPDB bot](https://y
 All the infromation you'd need to install and run these commands are listed below, but please make sure to read each segment **fully and thoroughly** before adding any of the commands to your Discord server.
 
 # Skyforge Command
+This command will output the relevant data about the Skyforge MMO game with the following options:
+```
+-skyforge
+-skyforge build
+-skyforge build dps
+-skyforge build support
+-skyforge build tank
+-skyforge build companion
+-skyforge weapons
+-skyforge adepts
+-skyforge ether
+-skyforge aspects
+-skyforge cog
+-skyforge cognition
+-skyforge tips
+-skyforge argents
+-skyforge disclaimer
+```
+
 To install this custom command:
 - Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
@@ -41,6 +60,12 @@ Here is a preview of the command `-skyforge`:
 ![skyforge-command](https://i.imgur.com/IT1OEyy.jpeg)
 
 # PvP Command
+This command will output data relevant to PvP Happy Hours, schedule and active maps with the following options:
+```
+-pvp
+-pvp next
+```
+
 To install this custom command:
 - Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
@@ -70,6 +95,8 @@ So the result would be:
 ```
 
 # PvP Auto Announce
+This command will automatically announce the active PvP maps in the channel you specify on your Discord server during happy hours.
+
 To install this custom command:
 - Login to your YAGPDB Dashboard. ([Here](https://yagpdb.xyz/manage))
 - Navigate to Core -> Custom Commands.
