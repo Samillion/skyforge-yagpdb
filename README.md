@@ -17,10 +17,10 @@ I've created custom commands that will provide useful information on Discord abo
 To use any of the commands here, first you'll need to add [YAGPDB bot](https://yagpdb.xyz/) to your Discord server. They provide detailed documentation on how to get started with the bot [here](https://docs.yagpdb.xyz/getting-started).
 
 ### Important
-All the infromation you'd need to install and run these commands are listed below, but please make sure to read each segment **fully and thoroughly** before adding any of the commands to your Discord server.
+All the infromation you'd need to install and run these commands are listed below, but please make sure to read each section **fully and thoroughly** before adding any of the commands to your Discord server.
 
 # Skyforge Command
-This command will output the relevant data about the Skyforge MMO game with the following options:
+This command will output the relevant data about the MMO game Skyforge with the following options:
 ```
 -skyforge
 -skyforge build
@@ -90,7 +90,7 @@ Here is a preview of the command `-pvp`:
 If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
 
 So the result would be:
-```lua
+```go
 {{ $region := "NA" }}
 ```
 
@@ -118,11 +118,11 @@ Here is a preview of the PvP Auto Announce command:
 ![pvp-announce-demo](https://i.imgur.com/nccwol4.jpeg)
 
 ### IMPORTANT (for PvP Auto Announce)
-If you would like the bot to announce it for NA region times, in the first lines of the code change `Europe/Berlin` to `US/Pacific`.
+If you would like the bot to announce it for NA region times, in the first line of code change `EU` to `NA`.
 
 So the result would be:
-```lua
-{{ $tz := "US/Pacific" }}
+```go
+{{ $region := "NA" }}
 ```
 
 ### Also
@@ -135,7 +135,7 @@ So at any hour of the day, just save or run the command at `HH:00:00` so that it
 ![interval-display-zero](https://i.imgur.com/OcRsrFu.jpeg)
 
 # Information & Disclaimer
-All the information provided by `-skyforge` is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
+All the information provided by `-skyforge` and the other commands is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
 
 This project was started by Sam Sinner and Leo Scrame.
 
