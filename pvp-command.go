@@ -13,8 +13,8 @@
 {{ end }}
 {{ $location := (newDate 0 0 0 0 0 0 $tz).Location }}
 {{ $time := currentTime.In $location }}
-{{ $hour := ( toInt ( $time.Format "15" ) ) }}
-{{ $day := ( $time.Format "Monday" ) }}
+{{ $hour := toInt ( $time.Format "15" ) }}
+{{ $day := $time.Format "Monday" }}
 {{ $at := 0 }}
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
 {{ if and ( ge $hour 21 ) ( le $hour 23 ) }}
@@ -79,8 +79,10 @@
 {{ else }}
     {{ $out = "Not set" }}
 {{ end }}
+{{ $readable := (newDate 0 0 0 $at 0 0).Format "3:04" }}
+{{ $readable := joinStr "" $readable " PM" }}
 {{ if $post }}
-	{{ $descP := ( joinStr "" "Next active map type: **" $out "** at **" $at ":00 " $showTz "**." ) }}
+	{{ $descP := ( joinStr "" "Next active map type: **" $out " **at** " $readable " " $showTz "**." ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
 		"description" $descP
@@ -88,12 +90,12 @@
 		"color" $colorPurple
 		"footer" (sdict "text" "Sub-option: -pvp next")
 	}}
-	{{ if ( eq (len .Args) 2 ) }}
+	{{ if eq (len .Args) 2 }}
 		{{ $pvpOpt := ( cslice "next" ) }}
 		{{ $pvpArg := index .CmdArgs 0 }}
-		{{ $pvpArg := ( lower $pvpArg ) }}
+		{{ $pvpArg := lower $pvpArg }}
 		{{ if in $pvpOpt $pvpArg }}
-			{{ if ( eq $pvpArg "next" ) }}
+			{{ if eq $pvpArg "next" }}
 				{{ $embedPvP := cembed 
 					"title" "PvP"
 					"description" $descP
