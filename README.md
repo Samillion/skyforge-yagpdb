@@ -94,7 +94,9 @@ So the result would be:
 
 This is a limitation of YAGPDB not having the option to control when exactly you can run the command. So for example, if you save it on `4:35:20 PM`, the command will check every hour on `X:35:20` and that will mean Happy Hour announcements will be late as well.
 
-So at any hour of the day, just save or run the command at `HH:00:00` so that it would run at the start of every hour.
+So at any hour of the day, just save or run the command at `HH:00:00` so that it would run at the start of every hour, as displayed here:
+
+![interval-display-zero](https://i.imgur.com/OcRsrFu.jpeg)
 
 # Information & Disclaimer
 All the information provided by `-skyforge` is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
