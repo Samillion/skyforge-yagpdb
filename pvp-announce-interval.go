@@ -13,7 +13,6 @@
 {{ $time := currentTime.In $location }}
 {{ $hour := toInt ( $time.Format "15" ) }}
 {{ $day := $time.Format "Monday" }}
-{{ $hour = 17 }}
 {{ if eq $day "Saturday" "Sunday" }}
 	{{ if or ( eq $hour 14 ) ( eq $hour 17 ) ( eq $hour 20 ) }}
 		{{ $out = "All" }}
