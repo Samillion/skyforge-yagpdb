@@ -89,6 +89,7 @@ So the result would be:
 {{ $tz := "US/Pacific" }}
 ```
 
+### Also
 [Only once] You ***have to*** save or run this command at the beginning of any hour of the day, otherwise the announcements won't be accurate later on.
 
 This is a limitation of YAGPDB not having the option to control when exactly you can run the command. So for example, if you save it on `4:35:20 PM`, the command will check every hour on `X:35:20` and that will mean Happy Hour announcements will be late as well.
@@ -108,3 +109,6 @@ This project was started by Sam Sinner and Leo Scrame.
 
 # License
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
+
+# Contact
+If there are any issues, either open a ticket in this repository or contact me on Skyforge's official Discord server: **[EG] Sam Sinner**.
