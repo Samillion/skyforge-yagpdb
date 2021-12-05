@@ -2,11 +2,11 @@
 {{$colorRed := 16711680}}
 {{ $embedMain := cembed 
 	"title" "Options"
-	"description" "build \nweapons \nadepts \nether \naspects \ncog or cognition \ntips \nargents \ndisclaimer"
+	"description" "build \nweapons \nadepts \nether \naspects \ncog \ntips \nargents \ndisclaimer"
 	"color" $colorRed
 }}
 {{if (eq (len .Args) 2 3)}}
-	{{$skyOpt := (cslice "build" "weapons" "adepts" "ether" "aspects" "cog" "cognition" "tips" "argents" "disclaimer")}}
+	{{$skyOpt := (cslice "build" "weapons" "adepts" "ether" "aspects" "cog" "tips" "argents" "disclaimer")}}
 	{{$skyArg := index .CmdArgs 0}}
 	{{$skyArg := (lower $skyArg)}}
 	{{if in $skyOpt $skyArg}}
@@ -45,7 +45,7 @@
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
-		{{else if eq $skyArg "cog" "cognition"}}
+		{{else if eq $skyArg "cog"}}
 			{{$embed := cembed 
 				"title" "Cognition"
 				"description" "Cognition is the currency used to develop your Aspects.\n\n**How to earn Cognition:**\n- Directive rewards.\n- Finishing Training and Champion Avatar, Distortions.\n- Killing invaded region bosses (Event).\n- Participating in Pantheon Wars battles.\n\n**Notes:**\n- Fully developing each Aspect (Gold Node), will increase the amount of Cognition you earn.\n- Having 'Seal of Deeds' active in your Cathedral increases the amount of Cognition you earn from killing invaded region bosses."
