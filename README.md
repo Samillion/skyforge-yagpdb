@@ -1,4 +1,13 @@
 # Skyforge-YAGPDB
+- [Overview](#overview)
+- [Skyforge Command](#skyforge-command)
+- [PvP Command](#pvp-command)
+- [PvP Auto Announce](#pvp-auto-announce)
+- [Information & Disclaimer](#information--disclaimer)
+- [License](#license)
+- [Contact](#contact)
+
+# Overview
 I've created custom commands that will provide useful information on Discord about the MMO game [Skyforge](https://sf.my.games/en) using YAGPDB Bot [Custom Commands](https://docs.yagpdb.xyz/commands/custom-commands) feature.
 
 - Skyforge command outputs many useful information for players
@@ -113,4 +122,4 @@ This project was started by Sam Sinner and Leo Scrame.
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
 
 # Contact
-If there are any issues, either open a ticket in this repository or contact me on Skyforge's official Discord server: **[EG] Sam Sinner**.
+If there are any issues, either open a ticket in this repository or contact me on Skyforge's official Discord server: **[EG]Sam Sinner**.
