@@ -7,6 +7,9 @@ I've created custom commands that will provide useful information on Discord abo
 
 To use any of the commands here, first you'll need to add [YAGPDB bot](https://yagpdb.xyz/) to your Discord server. They provide detailed documentation on how to get started with the bot [here](https://docs.yagpdb.xyz/getting-started).
 
+### Important
+All the infromation you'd need to install and run these commands are listed bellow, but please make sure to read each segment **fully and thoroughly** before adding any of the commands to your Discord server.
+
 # Skyforge Command
 To install this custom command:
 - Login to your YAGPDB Dashbord. ([Here](https://yagpdb.xyz/manage))
@@ -53,7 +56,7 @@ Here is a preview of the command `-pvp`:
 If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
 
 So the result would be:
-```
+```lua
 {{ $region := "NA" }}
 ```
 
@@ -82,7 +85,7 @@ Here is a preview of the PvP Auto Announce command:
 If you would like the bot to announce it for NA region times, in the first lines of the code change `Europe/Berlin` to `US/Pacific`.
 
 So the result would be:
-```
+```lua
 {{ $tz := "US/Pacific" }}
 ```
 
