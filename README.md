@@ -77,7 +77,7 @@ Choose the following options:
 
 Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-command.go), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
-![pvp-dashboard](https://i.imgur.com/rA28yr6.jpeg)
+![pvp-dashboard](https://i.imgur.com/l9LilzK.jpeg)
 
 Click on "Save" and done! That's it. Try it on your Discord server with `-pvp`
 
@@ -108,7 +108,7 @@ Choose the following options:
 
 Then go [here](https://github.com/Samillion/skyforge-yagpdb/blob/main/pvp-announce-interval.go), click on "Raw" then copy all the code there and paste it in the "Response" field, as shown here:
 
-![pvp-announce-dashboard](https://i.imgur.com/HcQDlRG.jpeg)
+![pvp-announce-dashboard](https://i.imgur.com/eALjoFD.jpeg)
 
 Click on "Save" and done!
 
