@@ -28,6 +28,7 @@ This command will output the relevant data about the MMO game Skyforge with the 
 -skyforge build support
 -skyforge build tank
 -skyforge build companion
+-skyforge build pvp
 -skyforge weapons
 -skyforge adepts
 -skyforge ether
