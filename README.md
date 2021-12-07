@@ -114,7 +114,7 @@ Click on "Save" and done!
 
 Here is a preview of the PvP Auto Announce command:
 
-![pvp-announce-demo](https://i.imgur.com/nccwol4.jpeg)
+![pvp-announce-demo](https://i.imgur.com/s9MASbH.jpeg)
 
 ### IMPORTANT (for PvP Auto Announce)
 If you would like the bot to announce it for NA region times, in the first line of code change `EU` to `NA`.
