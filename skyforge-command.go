@@ -13,7 +13,7 @@
 		{{if eq $skyArg "weapons"}}
 			{{$embed := cembed 
 				"title" "Weapon Recommendations"
-				"description" "Listed weapons are considered (players opinion) to be priority, the essential ones.\n\nThat is why not all classes are listed. You should still prioritize which weapon to get first.\n\n**Alchemist:**\n- Scylla (Support)\n\n**Lightbinder:**\n- Telurgan Rod (Support)\n\n**Soundweaver:**\n- Khella (Support, Comp, PvP)\n\n**Grovewalker:**\n- Sigil (DPS, Tank)\n- Endurance Weapon (Tank)\n\n**Knight:**\n- Seth and Python (Tank)\n\n**Paladin:**\n- Lament and Sorrow (Tank, DPS, PvP)\n\n**Kinetic:**\n- Oenomaus (DPS, PvP)\n\n**Necromancer:**\n- Morana (DPS)\n- Morodea (DPS, PvP)\n\n**Berserker:**\n- Iron Heart (Mobs DPS, PvP)\n- Gvardar (Boss DPS)\n- Ragnar (DPS)\n\n**Monk:**\n- Kon (DPS)\n\n**Revenant:**\n- Baron (DPS)\n- Ner'gal (PvP)\n\n**Slayer:**\n- Aisa (DPS, PvP)\n\n**Archer:**\n- Ricinus (DPS, PvP)\n\n**Outlaw:**\n- Fang and Spike (DPS)"
+				"description" "Listed weapons are considered (players opinion) to be priority, the essential ones.\n\nThat is why not all classes are listed. You should still prioritize which weapon to get first.\n\n**Lightbinder:**\n- Telurgan Rod (Support, PvP)\n\n**Soundweaver:**\n- Khella (Support, Comp, PvP)\n\n**Grovewalker:**\n- Sigil (DPS, Tank)\n- Endurance Weapon (Tank)\n\n**Paladin:**\n- Lament and Sorrow (Tank, DPS, PvP)\n\n**Necromancer:**\n- Morana (DPS)\n- Morodea (DPS, PvP)\n\n**Berserker:**\n- Iron Heart (DPS, PvP)\n\n**Revenant:**\n- Baron (DPS)\n- Ner'gal (PvP)"
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
@@ -34,7 +34,7 @@
 		{{else if eq $skyArg "tips"}}
 			{{ $embed := cembed 
 				"title" "General Tips"
-				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
+				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling, unlock with Sparks of Transformation.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Alerium:**\nThat is the currency to unlock the A9 talents. Can be farmed in Thea (Region), for example by killing Kairax and doing region events.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
