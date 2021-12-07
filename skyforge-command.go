@@ -1,6 +1,6 @@
 {{$colorGold := 16771846}}
 {{$colorRed := 16711680}}
-{{ $embedMain := cembed 
+{{$embedMain := cembed 
 	"title" "Options"
 	"description" "build \nweapons \nadepts \nether \naspects \ncog \ntips \nargents \ndisclaimer"
 	"color" $colorRed
