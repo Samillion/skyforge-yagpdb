@@ -37,7 +37,7 @@ Wählen Sie die folgenden Optionen:
 - Trigger type: command
 - Trigger: skyforge
 
-Hier können Sie einen anderen Trigger wählen, wenn auf Ihrem Server der Bot anders angesprochen werden soll. zB.: `sfde` -> `-sfde Build PvP`
+Hier können Sie einen anderen Trigger wählen, wenn auf Ihrem Server der Bot anders angesprochen werden soll. zB.: `sfde` -> `-sfde Ether`
 
 Gehen Sie nun [hierhin](https://github.com/Samillion/skyforge-yagpdb/blob/main/translations/skyforge-DE.go), klicken Sie auf "Raw" und kopieren den Code in die "Response"-Zeile, wie es hier gezeigt wird:
 
