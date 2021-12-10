@@ -4,7 +4,9 @@
 - [Skyforge-FR](#skyforge-fr-command)
 
 ## Overview
-Below are instructions on how to install the `-skyforge` command in DE (German) and FR (French) languages.
+Translations for the `-skyforge` English command in DE (German) and FR (French) languages.
+
+If you already have the English `-skyforge` command added, we suggest to add the new commands as `-sfde` for German and `-sffr` for French, which is all explained below in detail.
 
 This was made possible thanks to the efforts of the following awesome people:
 - DE: Leo Scrame
