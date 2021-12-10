@@ -35,7 +35,7 @@ Um diesen Custom Befehl zu installieren folgen Sie diesen Schritten:
 
 Wählen Sie die folgenden Optionen:
 - Trigger type: command
-- Trigger: sfde
+- Trigger: skyforge
 
 Hier können Sie einen anderen Trigger wählen, wenn auf Ihrem Server der Bot anders angesprochen werden soll. zB.: `sfde` -> `-sfde Build PvP`
 
