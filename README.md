@@ -146,6 +146,11 @@ This project was started by Sam Sinner and Leo Scrame.
 - Istani Revenant
 - Nova Char
 
+**Translators:**
+- DE: Leo Scrame
+- FR: Jynn Zemxil
+- Middleman: Phiozof Barophilo
+
 # License
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
 
