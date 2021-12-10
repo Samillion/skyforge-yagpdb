@@ -39,11 +39,11 @@ Wählen Sie die folgenden Optionen:
 
 Hier können Sie einen anderen Trigger wählen, wenn auf Ihrem Server der Bot anders angesprochen werden soll. zB.: `sfde` -> `-sfde Build PvP`
 
-Gehen Sie nun [hierhin](translations/skyforge-DE.go), klicken Sie auf "Raw" und kopieren den Code in die "Response"-Zeile, wie es hier gezeigt wird:
+Gehen Sie nun [hierhin](https://github.com/Samillion/skyforge-yagpdb/blob/main/translations/skyforge-DE.go), klicken Sie auf "Raw" und kopieren den Code in die "Response"-Zeile, wie es hier gezeigt wird:
 
 ![skyforge-dashboard](https://i.imgur.com/HXHfqQE.jpeg)
 
-Speichern Sie nun mit dem "Save"-Knopf, um die Einbindung abzuschließen. Probieren Sie es nun auf Ihrem Discord Server indem sie -skyforge eingeben.
+Speichern Sie nun mit dem "Save"-Knopf, um die Einbindung abzuschließen. Probieren Sie es nun auf Ihrem Discord Server indem Sie `-skyforge` eingeben.
 
 Hier ist eine Vorschau auf den -skyforge Befehl:
 
