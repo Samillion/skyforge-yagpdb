@@ -30,7 +30,7 @@ Dieser Befehl gibt relevante Informationen über das MMO Spiel "Skyforge" durch 
 Um diesen Custom Befehl zu installieren folgen Sie diesen Schritten:
 - Loggen Sie sich in Ihr YAGPDB Dashboard. ([Hier]( https://yagpdb.xyz/manage ))
 - Navigieren Sie zu Core -> Custom Commands.
-- Wenn Sie den Befehl nur für bestimmte Rollen nutzbar machen wollen, erstellen Sie eine neue Gruppe. Andernfalls bewegen Sie sich zum "Ungrouped" Fenster.
+- Wenn Sie den Befehl nur für bestimmte Rollen nutzbar machen wollen, erstellen Sie eine neue Gruppe. Andernfalls bewegen Sie sich zum "Ungrouped" Reiter.
 - Klicken Sie auf "Create a new Custom Command".
 
 Wählen Sie die folgenden Optionen:
