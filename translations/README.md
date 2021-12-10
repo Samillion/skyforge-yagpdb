@@ -1,3 +1,8 @@
+## Translations
+- [Overview](#overview)
+- [Skyforge-DE](#skyforge-de-command)
+- [Skyforge-FR](#skyforge-fr-command)
+
 ## Overview
 Below are instructions on how to install the `-skyforge` command in DE (German) and FR (French) languages.
 
