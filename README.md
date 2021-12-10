@@ -7,8 +7,9 @@
 - [License](#license)
 - [Contact](#contact)
 
-### Extras
-- [Skyforge Command translation (DE-FR)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations)
+### Translations
+- [Skyforge Command (DE)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations#skyforge-de-command)
+- [Skyforge Command (FR)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations#skyforge-fr-command)
 
 # Overview
 I've created custom commands that will provide useful information on Discord about the MMO game [Skyforge](https://sf.my.games/en) using YAGPDB Bot [Custom Commands](https://docs.yagpdb.xyz/commands/custom-commands) feature.
