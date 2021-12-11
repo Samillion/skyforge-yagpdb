@@ -34,7 +34,7 @@
 		{{else if eq $skyArg "tips"}}
 			{{ $embed := cembed 
 				"title" "General Tips"
-				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling, unlock with Sparks of Transformation.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Alerium:**\nThat is the currency to unlock the A9 talents. Can be farmed in Thea (Region), for example by killing Kairax and doing region events.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
+				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling, unlock with Sparks of Transformation.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Aelerium:**\nThat is the currency to unlock the A9 talents. Can be farmed in Thea (Region), for example by killing Kairax and doing region events.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
@@ -62,7 +62,7 @@
 		{{else if eq $skyArg "disclaimer"}}
 			{{$embed := cembed 
 				"title" "Disclaimer"
-				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char"
+				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char\n\n**Translators:**\n- DE: Leo Scrame\n- FR: Jynn Zemxil"
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
@@ -114,7 +114,7 @@
 					{{else if eq $role "pvp"}}
 						{{$embed := cembed 
 							"title" "PvP Build"
-							"description" "PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, replace Ruby with Emitter.\n\n**Recommended Artifact:**\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to go with Defense relics."
+							"description" "PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, replace Ruby with Emitter.\n\n**Recommended Artifact:**\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to use Defense relics."
 							"image" (sdict "url" "https://i.imgur.com/Gqgq8oj.png")
 							"color" $colorGold
 						}}
