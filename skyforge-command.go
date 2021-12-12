@@ -32,7 +32,7 @@
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "tips"}}
-			{{ $embed := cembed 
+			{{$embed := cembed 
 				"title" "General Tips"
 				"description" "**Which class to unlock first?**\nPlayers recommend Grovewalker, Firestarter or Revenant while leveling, unlock with Sparks of Transformation.\n\nThey provide decent damage and give you survivability.\n\n**Cathedral and Tower of Knowledge:**\nUsually recommended to not waste credits on Cathedral while leveling, because you'll need credits for many things (ie: gear) and you will get items to improve your cathedral rank as rewards.\n\nTower of Knowledge, upgrade it as you can, just don't use many Stimulants.\n\n**Aelerium:**\nThat is the currency to unlock the A9 talents. Can be farmed in Thea (Region), for example by killing Kairax and doing region events.\n\n**Halls of Trophies Priority:**\n- Personal Medic\n- Revive Master (and Thea-1)\n- Treasure Hunter\n- Asterius's Glyph (KoE Farm)\n\n**Important:** Always be a teamplayer and a good sport, adapt to group needs."
 				"color" $colorGold
