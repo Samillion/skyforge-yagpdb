@@ -91,7 +91,7 @@
 						{{ $embed := cembed 
 							"title" "Support Build"
 							"description" "Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear.\n\n**Recommended Artifact:**\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:**\n- Machavann's Guard (Might buff)\n- Herida's Wings"
-							"image" (sdict "url" "https://i.imgur.com/H5V9B6k.png")
+							"image" (sdict "url" "https://i.imgur.com/4oRZqm5.png")
 							"color" $colorGold
 						}}
 						{{sendMessage nil $embed}}
