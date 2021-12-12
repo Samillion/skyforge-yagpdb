@@ -57,4 +57,43 @@ Hier ist eine Vorschau auf den `-skyforge` Befehl:
 ![skyforge-command](https://i.imgur.com/aTEjD0M.jpeg)
 
 ## Skyforge-FR Command
-[Work in progress]
+Cette commande affiche les informations pertinentes à propos du MMO Skyforge avec les options suivantes
+
+```
+-skyforge
+-skyforge build
+-skyforge build dps
+-skyforge build support
+-skyforge build tank
+-skyforge build companion
+-skyforge build pvp
+-skyforge armes
+-skyforge adeptes
+-skyforge ether
+-skyforge astuces
+-skyforge cog
+-skyforge tips
+-skyforge argents
+```
+
+Pour installer les commandes personnalisées:
+- Connectez-vous au Tableau de Bord de YAGPDB ([Ici](https://yagpdb.xyz/manage))
+- Rendez-vous dans l'onglet "Core" -> "Custom Commands"
+- Recherchez l'onglet "Ungrouped" ou créez un nouveau groupe si vous voulez que cette commande ne soit utilisée que par des rôles spécifiques
+- Cliquez sur "Create a new Custom Command"
+
+Remplissez les options suivantes:
+- Trigger type: Command
+- Trigger: skyforge
+
+Vous pouvez changer l'option "Trigger" pour qu'elle soit plus spécifique dans votre langue. Par exemple pour le français : `sffr` -> `sffr ether`.
+
+Ensuite rendez-vous [ici](https://github.com/Samillion/skyforge-yagpdb/blob/main/translations/skyforge-FR.go), cliquez sur "Raw" pour copier tout le code qui s'y trouve et collez-le dans le champ "Response", comme montré ici:
+
+![skyforge-dashboard](https://i.imgur.com/rWZNAUp.jpeg)
+
+Cliquez sur "Save" et c'est terminé! Essayez-le sur votre serveur Discord avec `-skyforge`.
+
+Voici une prévisualisation de la commande `-skyforge`:
+
+![skyforge-command](https://i.imgur.com/SWRu7hT.jpeg)
