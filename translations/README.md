@@ -70,9 +70,9 @@ Cette commande affiche les informations pertinentes à propos du MMO Skyforge av
 -skyforge armes
 -skyforge adeptes
 -skyforge ether
--skyforge astuces
+-skyforge aspects
 -skyforge cog
--skyforge tips
+-skyforge astuces
 -skyforge argents
 ```
 
@@ -96,4 +96,4 @@ Cliquez sur "Save" et c'est terminé! Essayez-le sur votre serveur Discord avec 
 
 Voici une prévisualisation de la commande `-skyforge`:
 
-![skyforge-command](https://i.imgur.com/SWRu7hT.jpeg)
+![skyforge-command](https://i.imgur.com/j7oHCHO.jpeg)
