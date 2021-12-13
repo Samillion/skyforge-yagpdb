@@ -11,7 +11,8 @@ If you already have the English `-skyforge` command added, we suggest to add the
 This was made possible thanks to the efforts of the following awesome people:
 - DE: Leo Scrame
 - FR: Jynn Zemxil
-- Middleman: Phiozof Barophilo
+- QA: Phiozof Barophilo
+- QA: Sky Darcancia
 
 ## Skyforge-DE Command
 Dieser Befehl gibt relevante Informationen über das MMO Spiel "Skyforge" durch die folgenden Optionen wieder:
