@@ -62,7 +62,7 @@
 		{{else if eq $skyArg "disclaimer"}}
 			{{$embed := cembed 
 				"title" "Disclaimer"
-				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char\n\n**Translators:**\n- DE: Leo Scrame\n- FR: Jynn Zemxil\n- QA: Sky Darcancia\n- QA: Phiozof Barophilo"
+				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char\n\n**Translators:**\n- DE: Leo Scrame\n- FR: Jynn Zemxil\n- QA: Sky Darcancia\n- QA: Phiozof Barophilo\n\nProject availabile on [Github](https://github.com/Samillion/skyforge-yagpdb)"
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
