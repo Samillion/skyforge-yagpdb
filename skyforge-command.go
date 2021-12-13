@@ -48,21 +48,21 @@
 		{{else if eq $skyArg "cog"}}
 			{{$embed := cembed 
 				"title" "Cognition"
-				"description" "Cognition is the currency used to develop your Aspects.\n\n**How to earn Cognition:**\n- Directive rewards.\n- Finishing Training and Champion Avatar, Distortions.\n- Killing invaded region bosses (Event).\n- Participating in Pantheon Wars battles.\n\n**Notes:**\n- Fully developing each Aspect (Gold Node), will increase the amount of Cognition you earn.\n- Having 'Seal of Deeds' active in your Cathedral increases the amount of Cognition you earn from killing invaded region bosses."
+				"description" "Cognition is the currency used to develop your Aspects.\n\n**How to earn Cognition:**\n- Directive rewards.\n- Finishing Training and Champion Avatar, Distortions.\n- Killing invaded region bosses (Event).\n\n**Notes:**\n- Fully developing each Aspect (Gold Node), will increase the amount of Cognition you earn.\n- Having 'Seal of Deeds' active in your Cathedral increases the amount of Cognition you earn from killing invaded region bosses."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "argents"}}
 			{{$embed := cembed 
 				"title" "Argents"
-				"description" "Argents is the premium currency used in Skyforge to buy legendary weapons, styles, mounts and so on.\n\n**How to get Argents:**\n- Being top 50% in daily operations. (Resets every 2 weeks)\n- Reward for finishing the gold directive of Training Avatar.\n- Participating in Inghar.\n- Participating in Pantheon Wars.\n- Buying Argents packs for money."
+				"description" "Argents is the premium currency used in Skyforge to buy legendary weapons, styles, mounts and so on.\n\n**How to get Argents:**\n- Being top 50% in daily operations. (Resets every 2 weeks)\n- Reward for finishing the gold directive of Training Avatar.\n- Participating in Inghar.\n- Buying Argents packs for money."
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "disclaimer"}}
 			{{$embed := cembed 
 				"title" "Disclaimer"
-				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char\n\n**Translators:**\n- DE: Leo Scrame\n- FR: Jynn Zemxil"
+				"description" "All information provided by `-skyforge` is voluntary effort, not official. It is based on players testing, so result may vary depending on changes in the future.\n\nIt is meant to guide you in the correct direction.\n\nThis project was started by Sam Sinner and Leo Scrame.\n\n**Contributors:**\n- Laama Laamanen\n- Zanzuro Mizoru\n- Reinna Sigma\n- Istani Revenant\n- Nova Char\n\n**Translators:**\n- DE: Leo Scrame\n- FR: Jynn Zemxil\n- QA: Sky Darcancia\n- QA: Phiozof Barophilo"
 				"color" $colorGold
 			}}
 			{{sendMessage nil $embed}}
