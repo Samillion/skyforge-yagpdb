@@ -2,10 +2,10 @@
 {{$colorRed := 16711680}}
 {{$embedMain := cembed 
 "title" "Options"
-"description" "build \narmes \nadeptes \nether \nastuces \ncog \ntips \nargents"
+"description" "build \narmes \nadeptes \nether \naspects \ncog \nastuces \nargents"
 "color" $colorRed}}
 {{if (eq (len .Args) 2 3)}}
-{{$skyOpt := (cslice "build" "armes" "adeptes" "ether" "astuces" "cog" "tips" "argents")}}
+{{$skyOpt := (cslice "build" "armes" "adeptes" "ether" "aspects" "cog" "astuces" "argents")}}
 {{$skyArg := index .CmdArgs 0}}
 {{$skyArg := (lower $skyArg)}}
 {{if in $skyOpt $skyArg}}
@@ -27,13 +27,13 @@
 "description" "- Ne jamais annuler un voyage pour récupérer les récompenses.\n- Ajouter des reliques avec du Charisme & de la Constitution pour récupérer plus de foi.\n- Toujours envoyer ses adeptes en voyage.\n- Seulement 8 adeptes sont autorisés.\n- Toujours garder les adeptes avec les stats les plus hautes.\n\n**Notes:**\n- Avoir plus de 8 adeptes réduit la foi gagnée de 50%.\n- Lors des derniers 25% de son voyage, un adepte ramène plus de foi.\n- Plus vous gardez vos adeptes longtemps, plus leurs stats vont évoluer."
 "color" $colorGold}}
 {{sendMessage nil $embed}}
-{{else if eq $skyArg "tips"}}
+{{else if eq $skyArg "astuces"}}
 {{$embed := cembed 
-"title" "Astuces générales"
+"title" "Petites Astuces"
 "description" "**Quelle classe débloquer en premier?**\nLes joueurs recommandent le Saronide, le Feurioso ou le Revenant pendant que vous gagnez en rang, déblocables avec les Étincelles de Transformation.\n\nCes classes vous permettent de survivre tout en infligeant de bons dégâts.\n\n**Cathédrale et Tour de la Connaissane:**\nLes joueurs vous recommandent généralement de ne pas gaspiller vos crédits pendant que vous montez en niveau ; vous aurez besoin de ces crédits pour d'autres choses (ie: l'équipement) et vous allez obtenir des fidèles pour améliorer le rang de votre Cathédrale en récompense.\n\nAugmentez votre Tour de la Connaissance avec les ressources que vous avez, mais n'utilisez pas beaucoup de Stimulants..\n\n**Aelerium:**\nIl s'agit de la ressource utilisée pour débloquer les talents Aelerium-9 (A9). Ils peuvent être récupérés à Théa (Région), en tuant Kairax ou en participant aux évènements de la région.\n\n**Quel bonus débloquer en priorité dans la salle des trophées:**\n- Médecin Personnel\n- Ramener le maître à la vie (et Théa-1)\n- Chasseur de trésors\n- Glyphe d'Asterius (KoE Farm)\n\n**Important:** Il est primordial d'avoir toujours l'esprit d'équipe, d'être bon joueur et de s'adapter aux besoins du groupe."
 "color" $colorGold}}
 {{sendMessage nil $embed}}
-{{else if eq $skyArg "astuces"}}
+{{else if eq $skyArg "aspects"}}
 {{$embed := cembed 
 "title" "Formes d'Aspects"
 "description" "Aspects: Ténacité, Rage, Pitié, Magie, Vengeance.\n\nAu début, vous avez 3 aspects disponibles (Ténacité, Rage, Pitié). Pour débloquer les deux autres aspects, vous devez vaincre deux Avatars Champions.\n\n**Priorité des Aspects:**\nChaque aspect prend du temps ; pour terminer les 5 aspects, vous avez besoin d'un total de 3.1 million de Cognition.\n\nPour cette raison, les joueurs recommandent de compléter vos aspects dans cet ordre:\n\n**Premier Aspect : la Pitié**\nCeci est le point sur lequel tout le monde s'entend concernant les aspects : complétez tout d'abord la Pitié. Le nodule d'or apporte d'énormes avantages, dont les élixirs, qui vous permettent d'utiliser gratuitement votre forme d'Aspect.\n\n**Après la Pitié:**\nIl y a beaucoup de débats sur l'aspect à prioriser après la Pitié, cela va en grande partie dépendre de votre gameplay. On vous recommande fortement de vérifier chaque nodule d'or pour vous aider à vous décider."
