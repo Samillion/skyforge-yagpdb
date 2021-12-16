@@ -4,6 +4,7 @@
 {{ $post := false }}
 {{ $tz := "Europe/Berlin" }}
 {{ $showTz := "CET" }}
+{{ $hhImage := "https://media.discordapp.net/attachments/913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
 {{ if ( eq ( lower $region ) "na" ) }}
 	{{ $tz = "US/Pacific" }}
 	{{ $showTz = "PST" }}
@@ -82,11 +83,11 @@
 {{ $readable := (newDate 0 0 0 $at 0 0).Format "3:04" }}
 {{ $readable := joinStr "" $readable " PM" }}
 {{ if $post }}
-	{{ $descP := ( joinStr "" "Next active map type: **" $out " **at** " $readable " " $showTz "**." ) }}
+	{{ $descPvP := ( joinStr "" "Next active map type: **" $out " **at** " $readable " " $showTz "**." ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
-		"description" $descP
-		"image" (sdict "url" "https://i.imgur.com/QDqUvJA.jpeg")
+		"description" $descPvP
+		"image" (sdict "url" $hhImage)
 		"color" $colorPurple
 		"footer" (sdict "text" "Sub-option: -pvp next")
 	}}
@@ -98,7 +99,7 @@
 			{{ if eq $pvpArg "next" }}
 				{{ $embedPvP := cembed 
 					"title" "PvP"
-					"description" $descP
+					"description" $descPvP
 					"color" $colorPurple
 				}}
 				{{ sendMessage nil $embedPvP }}
@@ -112,7 +113,7 @@
 {{ else }}
 	{{ $embedPvP := cembed 
 		"title" "PvP"
-		"image" (sdict "url" "https://i.imgur.com/QDqUvJA.jpeg")
+		"image" (sdict "url" $hhImage)
 		"color" $colorPurple
 	}}
 	{{ sendMessage nil $embedPvP }}
