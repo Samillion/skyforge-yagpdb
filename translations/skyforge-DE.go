@@ -24,7 +24,7 @@
 {{else if eq $skyArg "adepten"}}
 {{$embed := cembed
 "title" "Adepten (Glauben)"
-"description" "- Beende niemals die Reise eines Adepten vorzeitig.\n- Nutze Charisma- & Konstitutionsrelliquien um den Glauben zu maximieren.\n- Sende deine Adepten immer auf Reisen.\n- 8 Adepten sind maximal erlaubt, für zusätzlichen Glauben schicke überflüssige Adepten weg.\n- Behalte immer die Adepten mit den höchsten Eigenschaften\n\n**Notizen:**\n- Mehr als 8 Adepten reduzieren das Glaubenseinkommen um 50%.\n- Die letzten 25% einer Reise bringen am meisten Glauben."
+"description" "- Beende niemals die Reise eines Adepten vorzeitig.\n- Nutze Charisma- & Konstitutionsrelliquien um den Glauben zu maximieren.\n- Sende deine Adepten immer auf Reisen.\n- 8 Adepten sind maximal erlaubt, für zusätzlichen Glauben schicke überflüssige Adepten weg.\n- Behalte immer die Adepten mit den höchsten Eigenschaften\n\n**Notizen:**\n- Mehr als 8 Adepten reduzieren das Glaubenseinkommen um 50%.\n- Die letzten 30% einer Reise bringen am meisten Glauben."
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $skyArg "tipps"}}
