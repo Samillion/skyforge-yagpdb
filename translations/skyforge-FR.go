@@ -67,35 +67,35 @@
 {{$embed := cembed 
 "title" "DPS Build"
 "description" "DPS build by **Leo Scrame**\n\n**Note:**\nThe first two symbol sets below are based on protection, whether you want it to save you from a one shot or have protection from DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:**\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:**\n- Nerion's Hammer\n- Cyrus's Blades\n- Integrator's Transformer"
-"image" (sdict "url" "https://i.imgur.com/fw4W64p.png")
+"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994016303120394/full-dps-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $role "support"}}
 {{ $embed := cembed 
 "title" "Support Build"
 "description" "Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear.\n\n**Recommended Artifact:**\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:**\n- Machavann's Guard (Might buff)\n- Herida's Wings"
-"image" (sdict "url" "https://i.imgur.com/Gj2lc0b.png")
+"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994378300923955/full-support-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $role "tank"}}
 {{$embed := cembed 
 "title" "Tank Build"
 "description" "Tank build by **Leo Scrame**.\n\n**Note:**\nMany Artifacts work well with a Tank build, so we decided to list all the useful ones in order.\n\n**Recommended Artifact:**\n- Aegis of the Ocean\n- Overload Module (with Implacability)\n- Viper Wristlet\n- Impenetrable Shield\n\n**Recommended Divine Weapon:**\n- Protheus's Trident\n- Laertes's Sword"
-"image" (sdict "url" "https://i.imgur.com/emugFG7.png")
+"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994613840465920/full-tank-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $role "companion"}}
 {{$embed := cembed 
 "title" "Companion Build"
 "description" "Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver. However, you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal.\n\n**Recommended Artifact:**\n- Overload Module\n- Hyper Engine (Soundweaver)\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
-"image" (sdict "url" "https://i.imgur.com/T0VhzCR.png")
+"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920993893217099806/full-companion-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $role "pvp"}}
 {{$embed := cembed 
 "title" "PvP Build"
 "description" "PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, replace Ruby with Emitter.\n\n**Recommended Artifact:**\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to use Defense relics."
-"image" (sdict "url" "https://i.imgur.com/n6yYkYa.png")
+"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994248160071700/full-pvp-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{end}}
