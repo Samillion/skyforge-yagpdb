@@ -58,7 +58,7 @@
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $skyArg "build"}}
-{{$allowedRoles := (cslice "dps" "support" "tank" "gefährte" "pvp")}}
+{{$allowedRoles := (cslice "dps" "support" "tank" "gefährte" "comp" "pvp")}}
 {{if eq (len .Args) 2}}
 {{$embed := cembed
 "title" "Sub-Optionen"
@@ -90,7 +90,7 @@
 "image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920987010930470982/full-tank-build-de.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
-{{else if eq $role "gefährte"}}
+{{else if eq $role "gefährte" "comp"}}
 {{$embed := cembed
 "title" "Gefährten Build"
 "description" "Gefährten-Build von **Sam Sinner**, **Leo Scrame** und **Zanzuro Mizoru**.\n\n**Notiz:**\nDieser Build empfiehlt sich für den Klangschmied, man kann ihn aber auch auf anderen Klassen spielen.\n\nMan kann das Armband durch Inbrust der Aspekte ersetzen.\n\n**Empfohlene Artefakte:**\n- Modul 'Überlastung'\n- Hypermotor (Klangschmied)\n\n**Empfohlene göttliche Waffen:**\n- Cyrus' Klingen\n- Transformator des Integrators"
