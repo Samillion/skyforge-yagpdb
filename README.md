@@ -140,7 +140,7 @@ So at any hour of the day, just save or run the command at `HH:00:00` so that it
 ![interval-display-zero](https://i.imgur.com/OcRsrFu.jpeg)
 
 ## Contributors & Translators
-This project was started by Sam Sinner (Samillion) and Leo Scrame.
+This project was started by Sam Sinner and Leo Scrame.
 
 **Contributors:**
 - Laama Laamanen
@@ -154,6 +154,7 @@ This project was started by Sam Sinner (Samillion) and Leo Scrame.
 - FR: Jynn Zemxil
 - QA: Phiozof Barophilo
 - QA: Sky Darcancia
+- QA: Shocobo Kurochi
 
 # Disclaimer
 All the information provided by `-skyforge` and the other commands is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
