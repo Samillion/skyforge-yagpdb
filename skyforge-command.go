@@ -67,7 +67,7 @@
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "build"}}
-			{{$allowedRoles := (cslice "dps" "support" "tank" "companion" "pvp")}}
+			{{$allowedRoles := (cslice "dps" "support" "tank" "companion" "comp" "pvp")}}
 			{{if eq (len .Args) 2}}
 				{{$embed := cembed 
 					"title" "Sub-options"
@@ -103,7 +103,7 @@
 							"color" $colorGold
 						}}
 						{{sendMessage nil $embed}}
-					{{else if eq $role "companion"}}
+					{{else if eq $role "companion" "comp"}}
 						{{$embed := cembed 
 							"title" "Companion Build"
 							"description" "Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver. However, you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal.\n\n**Recommended Artifact:**\n- Overload Module\n- Hyper Engine (Soundweaver)\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
