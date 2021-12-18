@@ -52,11 +52,11 @@
 "color" $colorGold}}
 {{sendMessage nil $embed}}
 {{else if eq $skyArg "build"}}
-{{$allowedRoles := (cslice "dps" "support" "tank" "companion" "comp" "pvp")}}
+{{$allowedRoles := (cslice "dps" "support" "tank" "compagnon" "comp" "pvp")}}
 {{if eq (len .Args) 2}}
 {{$embed := cembed 
 "title" "Sub-options"
-"description" "dps \nsupport \ntank \ncompanion \npvp"
+"description" "dps \nsupport \ntank \ncompagnon \npvp"
 "color" $colorRed}}
 {{sendMessage nil $embed}}
 {{else}}
@@ -84,7 +84,7 @@
 "image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994613840465920/full-tank-build-fr.png")
 "color" $colorGold}}
 {{sendMessage nil $embed}}
-{{else if eq $role "companion" "comp"}}
+{{else if eq $role "compagnon" "comp"}}
 {{$embed := cembed 
 "title" "Build Compagnon"
 "description" "Build proposé par Sam Sinner, Leo Scrame et Zanzuro Mizoru.\n\n**Note:**\nCe build marche bien avec le Décibel. Mais vous pouvez l'utiliser avec d'autres classes\n\nVous pouvez aussi remplacer le Bracelet avec le Zèle.\n\n**Artefacts:**\n- Module Surcharge\n- Moteur Hyper (Décibel)\n\n**Arme Divine:**\n- Lames de Cyrus"
