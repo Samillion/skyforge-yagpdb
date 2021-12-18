@@ -13,6 +13,7 @@ This was made possible thanks to the efforts of the following awesome people:
 - FR: Jynn Zemxil
 - QA: Phiozof Barophilo
 - QA: Sky Darcancia
+- QA: Shocobo Kurochi
 
 ## Skyforge-DE Command
 Dieser Befehl gibt relevante Informationen über das MMO Spiel "Skyforge" durch die folgenden Optionen wieder:
@@ -66,7 +67,7 @@ Cette commande affiche les informations pertinentes à propos du MMO Skyforge av
 -skyforge build dps
 -skyforge build support
 -skyforge build tank
--skyforge build companion
+-skyforge build compagnon
 -skyforge build pvp
 -skyforge armes
 -skyforge adeptes
