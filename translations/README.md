@@ -57,7 +57,7 @@ Hier ist eine Vorschau auf den `-skyforge` Befehl:
 
 ![skyforge-command](https://i.imgur.com/aTEjD0M.jpeg)
 
-## Skyforge-FR Command [Incomplete: Work in progress]
+## Skyforge-FR Command
 Cette commande affiche les informations pertinentes à propos du MMO Skyforge avec les options suivantes
 
 ```
