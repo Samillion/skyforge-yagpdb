@@ -1,9 +1,9 @@
 # Skyforge-YAGPDB
 - [Overview](#overview)
+- [Contributors & Translators](#contributors--translators)
 - [Skyforge Command](#skyforge-command)
 - [PvP Command](#pvp-command)
 - [PvP Auto Announce](#pvp-auto-announce)
-- [Contributors & Translators](#contributors--translators)
 - [Disclaimer](#disclaimer)
 - [License](#license)
 - [Contact](#contact)
@@ -23,6 +23,23 @@ To use any of the commands here, first you'll need to add [YAGPDB bot](https://y
 
 ### Important
 All the infromation you'd need to install and run these commands are listed below, but please make sure to read each section **fully and thoroughly** before adding any of the commands to your Discord server.
+
+## Contributors & Translators
+This project was started by Sam Sinner and Leo Scrame.
+
+**Contributors:**
+- Laama Laamanen
+- Zanzuro Mizoru
+- Reinna Sigma
+- Istani Revenant
+- Nova Char
+
+**Translators:**
+- DE: Leo Scrame
+- FR: Jynn Zemxil
+- QA: Phiozof Barophilo
+- QA: Sky Darcancia
+- QA: Shocobo Kurochi
 
 # Skyforge Command
 This command will output the relevant data about the MMO game Skyforge with the following options:
@@ -138,23 +155,6 @@ This is a limitation of YAGPDB not having the option to control when exactly you
 So at any hour of the day, just save or run the command at `HH:00:00` so that it would run at the start of every hour, as displayed here:
 
 ![interval-display-zero](https://i.imgur.com/OcRsrFu.jpeg)
-
-## Contributors & Translators
-This project was started by Sam Sinner and Leo Scrame.
-
-**Contributors:**
-- Laama Laamanen
-- Zanzuro Mizoru
-- Reinna Sigma
-- Istani Revenant
-- Nova Char
-
-**Translators:**
-- DE: Leo Scrame
-- FR: Jynn Zemxil
-- QA: Phiozof Barophilo
-- QA: Sky Darcancia
-- QA: Shocobo Kurochi
 
 # Disclaimer
 All the information provided by `-skyforge` and the other commands is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
