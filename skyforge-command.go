@@ -1,12 +1,19 @@
 {{$colorGold := 16771846}}
 {{$colorRed := 16711680}}
+{{$mainOpts := cslice "build" "weapons" "adepts" "ether" "aspects" "cog" "tips" "argents" "disclaimer"}}
+{{$buildOpts := cslice "dps" "support" "tank" "companion" "comp" "pvp"}}
 {{$embedMain := cembed 
 	"title" "Options"
-	"description" "build \nweapons \nadepts \nether \naspects \ncog \ntips \nargents \ndisclaimer"
+	"description" (joinStr "\n" $mainOpts.StringSlice)
+	"color" $colorRed
+}}
+{{$embedBuild := cembed 
+	"title" "Sub-options"
+	"description" (joinStr "\n" $buildOpts.StringSlice)
 	"color" $colorRed
 }}
 {{if (eq (len .Args) 2 3)}}
-	{{$skyOpt := (cslice "build" "weapons" "adepts" "ether" "aspects" "cog" "tips" "argents" "disclaimer")}}
+	{{$skyOpt := $mainOpts}}
 	{{$skyArg := index .CmdArgs 0}}
 	{{$skyArg := (lower $skyArg)}}
 	{{if in $skyOpt $skyArg}}
@@ -67,18 +74,13 @@
 			}}
 			{{sendMessage nil $embed}}
 		{{else if eq $skyArg "build"}}
-			{{$allowedRoles := (cslice "dps" "support" "tank" "companion" "comp" "pvp")}}
+			{{$builds := $buildOpts}}
 			{{if eq (len .Args) 2}}
-				{{$embed := cembed 
-					"title" "Sub-options"
-					"description" "dps \nsupport \ntank \ncompanion \npvp"
-					"color" $colorRed
-				}}
-				{{sendMessage nil $embed}}
+				{{sendMessage nil $embedBuild}}
 			{{else}}
 				{{$role := index .CmdArgs 1}}
 				{{$role := lower $role}}
-				{{if in $allowedRoles $role}}
+				{{if in $builds $role}}
 					{{if eq $role "dps"}}
 						{{$embed := cembed 
 							"title" "DPS Build"
@@ -120,19 +122,14 @@
 						}}
 						{{sendMessage nil $embed}}
 					{{end}}
-					{{else}}
-					{{$embed := cembed 
-						"title" "Invalid"
-						"description" "Allowed: dps, support, tank, companion, pvp"
-						"color" $colorRed
-					}}
-					{{sendMessage nil $embed}}
-					{{end}}
+				{{else}}
+					{{sendMessage nil $embedBuild}}
 				{{end}}
+			{{end}}
 		{{end}}
 	{{else}}
 		{{sendMessage nil $embedMain}}
 	{{end}}
 {{else}}
-{{sendMessage nil $embedMain}}
+	{{sendMessage nil $embedMain}}
 {{end}}
