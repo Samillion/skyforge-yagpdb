@@ -8,9 +8,6 @@
 {{ if ( eq ( lower $region ) "na" ) }}
 	{{ $tz = "US/Pacific" }}
 	{{ $showTz = "PST" }}
-{{ else }}
-	{{ $tz = "Europe/Berlin" }}
-	{{ $showTz = "CET" }}
 {{ end }}
 {{ $location := (newDate 0 0 0 0 0 0 $tz).Location }}
 {{ $time := currentTime.In $location }}
