@@ -83,7 +83,7 @@
 						}}
 						{{sendMessage nil $embed}}
 					{{else if eq $role "support"}}
-						{{ $embed := cembed
+						{{$embed := cembed
 							"title" "Support Build"
 							"description" "Support Build von **Sam Sinner**, **Leo Scrame** und **Laama Laamanen**.\n\n**Notiz:**\nIgnoriere den Ehre-Stat der Ausrüstung.\n\n**Empfohlene Artefakte:**\n- Schwingen des Himmels (Machtbuffs)\n- Modul 'Überlastung' (mit Unterstützungsmodus)\n\n**Empfohlene göttliche Waffen:**\n- Machavanns Schutz (Machtbuffs)\n- Heridas Flügel"
 							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920986880391131206/full-support-build-de.png")
