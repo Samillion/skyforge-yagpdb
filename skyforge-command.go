@@ -85,7 +85,7 @@
 						{{$embed := cembed 
 							"title" "DPS Build"
 							"description" "DPS build by **Leo Scrame**\n\n**Note:**\nThe first two symbol sets below are based on protection, whether you want it to save you from a one shot or have protection from DoT.\n\nThe last symbol set is effective against mobs.\n\n**Recommended Artifact:**\n- Black Flame\n- Vulnerability Detector\n\n**Adept Relics:**\nIt is recommended to balance Main Damage and Critical Damage relics or go with Main Damage ones.\n\n**Recommended Divine Weapon:**\n- Nerion's Hammer\n- Cyrus's Blades\n- Integrator's Transformer"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920977294670057542/full-dps-build-en.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920977294670057542/full-dps-build-en.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -93,7 +93,7 @@
 						{{$embed := cembed 
 							"title" "Support Build"
 							"description" "Support Build by **Sam Sinner**, **Leo Scrame** and **Laama Laamanen**.\n\n**Note:**\nIgnore the Honor stat in the gear.\n\n**Recommended Artifact:**\n- Wings of Skies (Might buffs)\n- Overload Module (with Support Mode) (Optional)\n\n**Recommended Divine Weapon:**\n- Machavann's Guard (Might buff)\n- Herida's Wings"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920977603387588638/full-support-build-en.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920977603387588638/full-support-build-en.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -109,7 +109,7 @@
 						{{$embed := cembed 
 							"title" "Companion Build"
 							"description" "Companion build by **Sam Sinner**, **Leo Scrame** and **Zanzuro Mizoru**.\n\n**Note:**\nThis build is perfect with Soundweaver. However, you can also use it with other classes such as Lightbinder.\n\nYou can also replace the Bracelet with Zeal.\n\n**Recommended Artifact:**\n- Overload Module\n- Hyper Engine (Soundweaver)\n\n**Recommended Divine Weapon:**\n- Cyrus's Blades"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920976802749505536/full-companion-build-en.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920976802749505536/full-companion-build-en.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -117,7 +117,7 @@
 						{{$embed := cembed 
 							"title" "PvP Build"
 							"description" "PvP build by **Zanzuro Mizoru**\n\n**Note:**\nFor additional defense, you can replace the Sapphire with Beacon or to decrease opponents defense, replace Ruby with Emitter.\n\n**Recommended Artifact:**\n- Glyph of Despair\n- Viper Wristlet\n- Trewang's Idol\n\n**Adept Relics:**\nMany PvP players recommend to use Defense relics."
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920977445329448960/full-pvp-build-en.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920977445329448960/full-pvp-build-en.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
