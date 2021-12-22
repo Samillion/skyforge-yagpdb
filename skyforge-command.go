@@ -101,7 +101,7 @@
 						{{$embed := cembed 
 							"title" "Tank Build"
 							"description" "Tank build by **Leo Scrame**.\n\n**Note:**\nMany Artifacts work well with a Tank build, so we decided to list all the useful ones in order.\n\n**Recommended Artifact:**\n- Aegis of the Ocean\n- Overload Module (with Implacability)\n- Viper Wristlet\n- Impenetrable Shield\n\n**Recommended Divine Weapon:**\n- Protheus's Trident\n- Laertes's Sword"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920977603387588638/full-support-build-en.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920977752625135666/full-tank-build-en.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
