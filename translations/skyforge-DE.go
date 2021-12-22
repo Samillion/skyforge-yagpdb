@@ -78,7 +78,7 @@
 						{{$embed := cembed
 							"title" "DPS Build"
 							"description" "DPS Build von **Leo Scrame**\n\n**Notizen:**\nDie ersten zwei Symbol-Sets variieren abhängig davon, ob man wenige starke, oder viele schwache Treffer abbekommt.\n\nDas letzte Symbol-Set ist effektiv gegen schwächere Gegner.\n\n**Empfohlene Artefakte:**\n- Schwarze Flamme\n- Schwachstellen-Scanner\n\n**Adeptenreliquien:**\nEs wird empfohlen entweder Hauptschaden und kritischen Schaden auszubalancieren, oder sich auf Hauptschaden zu fokussieren.\n\n**Empfohlene göttliche Waffen:**\n- Cyrus' Klingen\n- Transformator des Integrators\n- Hammer von Nerion"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920986307629572106/full-dps-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920986307629572106/full-dps-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -86,7 +86,7 @@
 						{{$embed := cembed
 							"title" "Support Build"
 							"description" "Support Build von **Sam Sinner**, **Leo Scrame** und **Laama Laamanen**.\n\n**Notiz:**\nIgnoriere den Ehre-Stat der Ausrüstung.\n\n**Empfohlene Artefakte:**\n- Schwingen des Himmels (Machtbuffs)\n- Modul 'Überlastung' (mit Unterstützungsmodus)\n\n**Empfohlene göttliche Waffen:**\n- Machavanns Schutz (Machtbuffs)\n- Heridas Flügel"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920986880391131206/full-support-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920986880391131206/full-support-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -94,7 +94,7 @@
 						{{$embed := cembed
 							"title" "Tank Build"
 							"description" "Tank Build von **Leo Scrame**.\n\n**Empfohlene Artefakte:**\n- Aegis des Ozeans\n- Modul 'Überlastung' (mit Unerbittlichkeit der Aspekte)\n- Vipernarmband\n- Undurchdringlicher Schild\n\n**empfohlene göttliche Waffen:**\n- Protheus' Dreizack\n- Schwert von Laertes"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920987010930470982/full-tank-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920987010930470982/full-tank-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -102,7 +102,7 @@
 						{{$embed := cembed
 							"title" "Gefährten Build"
 							"description" "Gefährten-Build von **Sam Sinner**, **Leo Scrame** und **Zanzuro Mizoru**.\n\n**Notiz:**\nDieser Build empfiehlt sich für den Klangschmied, man kann ihn aber auch auf anderen Klassen spielen.\n\nMan kann das Armband durch Inbrust der Aspekte ersetzen.\n\n**Empfohlene Artefakte:**\n- Modul 'Überlastung'\n- Hypermotor (Klangschmied)\n\n**Empfohlene göttliche Waffen:**\n- Cyrus' Klingen\n- Transformator des Integrators"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920986112732856320/full-companion-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920986112732856320/full-companion-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -110,7 +110,7 @@
 						{{$embed := cembed
 							"title" "PvP Build"
 							"description" "PvP Build von **Zanzuro Mizoru**\n\n**Notiz:**\nFür zusätzliche Verteidigung kann man den Saphir durch Licht der Fürbitte ersetzen, oder um die Verteidigung der Gegner zu reduzieren den Rubin durch den Strahler des Untergangs.\n\n**Empfohlene Artefakte:**\n- Schrifttafel der Verzweiflung\n- Vipernarmband\n- Trewangs Idol\n\n**Adeptenreliquien:**\nDie meisten PvP-Spieler empfehlen Verteidigung."
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920986546604240916/full-pvp-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920986546604240916/full-pvp-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
