@@ -1,10 +1,9 @@
 {{ $region := "EU" }}
 {{ $colorPurple := 5793266 }}
-{{ $out := "Void" }}
+{{ $out := "" }}
 {{ $post := false }}
 {{ $tz := "Europe/Berlin" }}
 {{ $showTz := "CET" }}
-{{ $hhImage := "https://media.discordapp.net/attachments/913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
 {{ if ( eq ( lower $region ) "na" ) }}
 	{{ $tz = "US/Pacific" }}
 	{{ $showTz = "PST" }}
@@ -14,6 +13,8 @@
 {{ $hour := toInt ( $time.Format "15" ) }}
 {{ $day := $time.Format "Monday" }}
 {{ $at := 0 }}
+{{ $d := "https://media.discordapp.net/attachments/" }}
+{{ $hhImage := joinStr "" $d "913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
 {{ if and ( ge $hour 21 ) ( le $hour 23 ) }}
 	{{ $day = ( $time.AddDate 0 0 1 ).Weekday.String }}
