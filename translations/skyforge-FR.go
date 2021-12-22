@@ -78,7 +78,7 @@
 						{{$embed := cembed 
 							"title" "Build DPS"
 							"description" "Build proposé par Leo Scrame\n\n**Note:**\nLes deux premiers sets de symboles montrés sous le build sont basés sur de la protection contre les 'one-shots' (1er) ou contre des dots (2ieme). Le dernier set est efficace contre les monstres.\n\n**Artefacts:**\n- Flamme Noire\n- Détecteur de Vulnérabilité\n\n**Reliques:**\nIl est recommandé d'équilibrer les reliques avec des Dégâts Principaux et des Dégâts Critiques, ou de mettre uniquement des Dégâts Principaux.\n\n**Armes Divines:**\n- Marteau de Nerion\n- Lames de Cyrus\n- Intégrateur"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994016303120394/full-dps-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920994016303120394/full-dps-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -86,7 +86,7 @@
 						{{$embed := cembed 
 							"title" "Build Support"
 							"description" "Build proposé par Sam Sinner, Leo Scrame et Laama Laamanen.\n\n**Note:**\nVous pouvez ignorer la statistique d'Honneur de cet équipement.\n\n**Artefacts:**\n- Ailes des cieux (buffs de puissance)\n- Module Surcharge (avec le Mode Soutien) (Optionnel)\n\n**Armes Divines:**\n- Machavann\n- Ailes d'Herida"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994378300923955/full-support-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920994378300923955/full-support-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -94,7 +94,7 @@
 						{{$embed := cembed 
 							"title" "Build Tank"
 							"description" "Build proposé par Leo Scrame\n\n**Note:**\nBeaucoup d'artefacts sont utiles pour tanker, donc nous avons décidé de lister les plus utiles.\n\n**Artefacts:**\n- Égide de l'Océan\n- Module Surcharge (avec Implacabilité)\n- Bracelet de Vipère\n- Bouclier impénétrable\n\n**Armes Divines:**\n- Trident de Prothéus\n- Épée de Laërte"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994613840465920/full-tank-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920994613840465920/full-tank-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -102,7 +102,7 @@
 						{{$embed := cembed 
 							"title" "Build Compagnon"
 							"description" "Build proposé par Sam Sinner, Leo Scrame et Zanzuro Mizoru.\n\n**Note:**\nCe build marche bien avec le Décibel. Mais vous pouvez l'utiliser avec d'autres classes\n\nVous pouvez aussi remplacer le Bracelet avec le Zèle.\n\n**Artefacts:**\n- Module Surcharge\n- Moteur Hyper (Décibel)\n\n**Arme Divine:**\n- Lames de Cyrus"
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920993893217099806/full-companion-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920993893217099806/full-companion-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
@@ -110,7 +110,7 @@
 						{{$embed := cembed 
 							"title" "Build PVP"
 							"description" "Build proposé par Zanzuro Mizoru\n\n**Note:**\nPour avoir plus de défense, vous pouvez remplacer le Saphir avec la Balise de Protection. Pour diminuer la défense de vos ennemis, remplacez le Rubis avec l'Emetteur du Désespoir\n\n**Artefacts:**\n- Glyphe du Désespoir\n- Bracelet de Vipère\n- Trewang\n\n**Reliques:**\nBeaucoup de joueurs PvP utilisent des reliques de Défense."
-							"image" (sdict "url" "https://media.discordapp.net/attachments/913303283110649916/920994248160071700/full-pvp-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920994248160071700/full-pvp-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
