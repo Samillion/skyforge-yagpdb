@@ -94,7 +94,7 @@
 						{{$embed := cembed
 							"title" "Tank Build"
 							"description" "Tank Build von **Leo Scrame**.\n\n**Empfohlene Artefakte:**\n- Aegis des Ozeans\n- Modul 'Überlastung' (mit Unerbittlichkeit der Aspekte)\n- Vipernarmband\n- Undurchdringlicher Schild\n\n**empfohlene göttliche Waffen:**\n- Protheus' Dreizack\n- Schwert von Laertes"
-							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920987010930470982/full-tank-build-de.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/925371728207695902/full-tank-build-de.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
