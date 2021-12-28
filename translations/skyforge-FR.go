@@ -94,7 +94,7 @@
 						{{$embed := cembed 
 							"title" "Build Tank"
 							"description" "Build proposé par Leo Scrame\n\n**Note:**\nBeaucoup d'artefacts sont utiles pour tanker, donc nous avons décidé de lister les plus utiles.\n\n**Artefacts:**\n- Égide de l'Océan\n- Module Surcharge (avec Implacabilité)\n- Bracelet de Vipère\n- Bouclier impénétrable\n\n**Armes Divines:**\n- Trident de Prothéus\n- Épée de Laërte"
-							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/920994613840465920/full-tank-build-fr.png")
+							"image" (sdict "url" "https://cdn.discordapp.com/attachments/913303283110649916/925371802627231784/full-tank-build-fr.png")
 							"color" $gold
 						}}
 						{{sendMessage nil $embed}}
