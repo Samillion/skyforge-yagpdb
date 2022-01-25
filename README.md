@@ -106,7 +106,7 @@ Click on "Save" and done! That's it. Try it on your Discord server with `-pvp`
 
 Here is a preview of the command `-pvp`:
 
-![pvp-command-demo](https://i.imgur.com/RH6xfaA.jpeg)
+![pvp-command-demo](https://i.imgur.com/rTLnoxp.png)
 
 ### IMPORTANT (for PvP Command)
 If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
