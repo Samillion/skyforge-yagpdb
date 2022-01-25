@@ -9,8 +9,7 @@
 	{{ $region = "EU" }}
 	{{ $tz = "Europe/Berlin" }}
 {{ end }}
-{{ $location := (newDate 0 0 0 0 0 0 $tz).Location }}
-{{ $time := currentTime.In $location }}
+{{ $time := currentTime.In (loadLocation $tz) }}
 {{ $hour := toInt ( $time.Format "15" ) }}
 {{ $day := $time.Format "Monday" }}
 {{ if eq $day "Saturday" "Sunday" }}
