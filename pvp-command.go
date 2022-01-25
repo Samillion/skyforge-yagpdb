@@ -79,7 +79,7 @@
 {{ $onTime := (newDate $time.Year 0 0 $at 0 0 $tz) }}
 {{ $readable := $onTime.Format "3:04 PM" }}
 {{ if $post }}
-	{{ $descPvP := ( joinStr "" "Next map: **" $out "**\nTime: **" $readable " " $showTz "**." "\nYour time: **<t:" $onTime.Unix ":t>**" ) }}
+	{{ $descPvP := ( joinStr "" "Next map: **" $out "**\nTime: **" $readable " " $showTz "**" "\nYour time: **<t:" $onTime.Unix ":t>**" ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
 		"description" $descPvP
