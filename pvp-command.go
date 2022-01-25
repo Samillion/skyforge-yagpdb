@@ -12,11 +12,13 @@
 {{ $time := currentTime.In $location }}
 {{ $hour := toInt ( $time.Format "15" ) }}
 {{ $day := $time.Format "Monday" }}
+{{ $dayNum := $time.Day }}
 {{ $at := 0 }}
 {{ $hhImage := "https://cdn.discordapp.com/attachments/913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
 {{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
 {{ if and ( ge $hour 21 ) ( le $hour 23 ) }}
 	{{ $day = ( $time.AddDate 0 0 1 ).Weekday.String }}
+	{{ $dayNum = ( $time.AddDate 0 0 1 ).Day }}
 	{{ $hour = 14 }}
 	{{ $at = 14 }}
 	{{ $post = true }}
@@ -77,7 +79,7 @@
 {{ else }}
     {{ $out = "Not set" }}
 {{ end }}
-{{ $onTime := (newDate $time.Year $time.Month $time.Day $at 0 0 $tz) }}
+{{ $onTime := (newDate $time.Year $time.Month $dayNum $at 0 0 $tz) }}
 {{ $readable := $onTime.Format "3:04 PM" }}
 {{ if $post }}
 	{{ $descPvP := ( joinStr "" "Next map: **" $out "**\nTime: **" $readable " " $showTz "**." "\nYour timezone: **<t:" $onTime.Unix ":t>**" ) }}
