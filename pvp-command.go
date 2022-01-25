@@ -77,10 +77,10 @@
 {{ else }}
     {{ $out = "Not set" }}
 {{ end }}
-{{ $readable := (newDate 0 0 0 $at 0 0).Format "3:04" }}
-{{ $readable := joinStr "" $readable " PM" }}
+{{ $onTime := (newDate $time.Year $time.Month $time.Day $at 0 0 $tz) }}
+{{ $readable := $onTime.Format "3:04 PM" }}
 {{ if $post }}
-	{{ $descPvP := ( joinStr "" "Next active map type: **" $out " **at** " $readable " " $showTz "**." ) }}
+	{{ $descPvP := ( joinStr "" "Next map: **" $out "**\nTime: **" $readable " " $showTz "**." "\nYour timezone: **<t:" $onTime.Unix ":t>**" ) }}
 	{{ $embedPvPmain := cembed 
 		"title" "PvP"
 		"description" $descPvP
