@@ -163,4 +163,4 @@ All the information provided by `-skyforge` and the other commands is voluntary 
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
 
 # Contact
-If there are any issues, either open a ticket in this repository or contact me on Skyforge's official Discord server: **[EG]Sam Sinner**.
+If there are any issues, either open a ticket in this repository or contact me on Discord: `Sam Sinner#0780`.
