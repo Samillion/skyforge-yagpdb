@@ -1,116 +1,119 @@
 {{ $region := "EU" }}
-{{ $colorPurple := 5793266 }}
-{{ $out := "" }}
-{{ $post := false }}
+{{ $image := "https://cdn.discordapp.com/attachments/913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
+
 {{ $tz := "Europe/Berlin" }}
-{{ $showTz := "CET" }}
-{{ if ( eq ( lower $region ) "na" ) }}
+{{ $zone := "CET" }}
+
+{{ if eq (lower $region) "na" }}
 	{{ $tz = "US/Pacific" }}
-	{{ $showTz = "PST" }}
+	{{ $zone = "PST" }}
 {{ end }}
+
 {{ $time := currentTime.In (loadLocation $tz) }}
-{{ $hour := toInt ( $time.Format "15" ) }}
+{{ $hour := $time.Format "15" | toInt }}
 {{ $day := $time.Format "Monday" }}
+
+{{ $post := false }}
+{{ $map := "" }}
 {{ $at := 0 }}
-{{ $hhImage := "https://cdn.discordapp.com/attachments/913303283110649916/920981799834898472/pvp-hh-table-en.jpeg" }}
-{{/* Trick bot to think it's tomorrow noon if current hour is more than 21. Kiss my ass, Laama! */}}
-{{ if and ( ge $hour 21 ) ( le $hour 23 ) }}
-	{{ $day = ( $time.AddDate 0 0 1 ).Weekday.String }}
+
+{{ if and (ge $hour 21) (le $hour 23) }}
+	{{ $day = ($time.AddDate 0 0 1).Weekday.String }}
 	{{ $hour = 14 }}
 	{{ $at = 14 }}
 	{{ $post = true }}
 {{ end }}
-{{/* Boring and lazy logic to determine map type */}}
-{{ if ( eq $day "Saturday" "Sunday" ) }}
-		{{ if and ( le $hour 14 ) ( lt $hour 17 ) }}
+
+{{ if eq $day "Saturday" "Sunday" }}
+		{{ if and (le $hour 14) (lt $hour 17) }}
 			{{ $at = 14 }}
-		{{ else if and ( le $hour 17 ) ( lt $hour 20 ) }}
+		{{ else if and (le $hour 17) (lt $hour 20) }}
 			{{ $at = 17 }}
-		{{ else if and ( le $hour 20 ) ( gt $hour 17 ) }}
+		{{ else if and (le $hour 20) (gt $hour 17) }}
 			{{ $at = 20 }}
 		{{ end }}
-        {{ $out = "All" }}
+        {{ $map = "All" }}
         {{ $post = true }}
-{{ else if and ( le $hour 14 ) ( lt $hour 17 ) }}
-    {{ if ( eq $day "Monday" ) }}
-        {{ $out = "10v10" }}
-    {{ else if ( eq $day "Tuesday" ) }}
-        {{ $out = "3v3" }}
-    {{ else if ( eq $day "Wednesday" ) }}
-        {{ $out = "10v10" }}
-    {{ else if ( eq $day "Thursday" ) }}
-        {{ $out = "5v5" }}
-    {{ else if ( eq $day "Friday" ) }}
-        {{ $out = "3v3" }}
-    {{ end }}
+{{ else if and (le $hour 14) (lt $hour 17) }}
+	{{ $set := sdict 
+		"Monday" "10v10"
+		"Tuesday" "3v3"
+		"Wednesday" "10v10"
+		"Thursday" "5v5"
+		"Friday" "3v3"
+	}}
+	
+	{{ if $set.HasKey $day }}
+		{{ $map = $set.Get $day }}
+	{{ end }}
+
 	{{ $at = 14 }}
     {{ $post = true }}
-{{ else if and ( le $hour 17 ) ( lt $hour 20 ) }}
-    {{ if ( eq $day "Monday" ) }}
-        {{ $out = "5v5" }}
-    {{ else if ( eq $day "Tuesday" ) }}
-        {{ $out = "5v5" }}
-    {{ else if ( eq $day "Wednesday" ) }}
-        {{ $out = "3v3" }}
-    {{ else if ( eq $day "Thursday" ) }}
-        {{ $out = "10v10" }}
-    {{ else if ( eq $day "Friday" ) }}
-        {{ $out = "5v5" }}
-    {{ end }}
+{{ else if and (le $hour 17) (lt $hour 20) }}
+	{{ $set := sdict 
+		"Monday" "5v5"
+		"Tuesday" "5v5"
+		"Wednesday" "3v3"
+		"Thursday" "10v10"
+		"Friday" "5v5"
+	}}
+	
+	{{ if $set.HasKey $day }}
+		{{ $map = $set.Get $day }}
+	{{ end }}
+
 	{{ $at = 17 }}
     {{ $post = true }}
-{{ else if and ( le $hour 20 ) ( gt $hour 17 ) }}
-    {{ if ( eq $day "Monday" ) }}
-        {{ $out = "3v3" }}
-    {{ else if ( eq $day "Tuesday" ) }}
-        {{ $out = "10v10" }}
-    {{ else if ( eq $day "Wednesday" ) }}
-        {{ $out = "5v5" }}
-    {{ else if ( eq $day "Thursday" ) }}
-        {{ $out = "3v3" }}
-    {{ else if ( eq $day "Friday" ) }}
-        {{ $out = "10v10" }}
-    {{ end }}
+{{ else if and (le $hour 20) (gt $hour 17) }}
+	{{ $set := sdict 
+		"Monday" "3v3"
+		"Tuesday" "10v10"
+		"Wednesday" "5v5"
+		"Thursday" "3v3"
+		"Friday" "10v10"
+	}}
+	
+	{{ if $set.HasKey $day }}
+		{{ $map = $set.Get $day }}
+	{{ end }}
+
 	{{ $at = 20 }}
     {{ $post = true }}
 {{ else }}
-    {{ $out = "Not set" }}
+    {{ $map = "Not set" }}
 {{ end }}
-{{ $onTime := (newDate $time.Year 0 0 $at 0 0 $tz) }}
+
+{{ $onTime := newDate $time.Year 0 0 $at 0 0 $tz }}
 {{ $readable := $onTime.Format "3:04 PM" }}
+
+{{ $fields := cslice 
+	(sdict "name" "Next Map" "value" $map "inline" true)
+	(sdict "name" "Time" "value" (print $readable " " $zone) "inline" true)
+	(sdict "name" "Your Time" "value" (print "<t:" $onTime.Unix ":t>") "inline" true)
+}}
+
+{{ $main := sdict 
+	"description" "Information about the next map and timings of PvP."
+	"fields" $fields
+	"image" (sdict "url" $image)
+	"footer" (sdict "text" "Sub-option: -pvp next")
+}}
+{{ $short := sdict "description" "Information about the next PvP map." "fields" $fields }}
+{{ $basic := sdict "image" (sdict "url" $image) }}
+
+{{ $embed := $main }}
+
 {{ if $post }}
-	{{ $descPvP := ( joinStr "" "Next map: **" $out "**\nTime: **" $readable " " $showTz "**" "\nYour time: **<t:" $onTime.Unix ":t>**" ) }}
-	{{ $embedPvPmain := cembed 
-		"title" "PvP"
-		"description" $descPvP
-		"image" (sdict "url" $hhImage)
-		"color" $colorPurple
-		"footer" (sdict "text" "Sub-option: -pvp next")
-	}}
-	{{ if eq (len .Args) 2 }}
-		{{ $pvpOpt := ( cslice "next" ) }}
-		{{ $pvpArg := index .CmdArgs 0 }}
-		{{ $pvpArg := lower $pvpArg }}
-		{{ if in $pvpOpt $pvpArg }}
-			{{ if eq $pvpArg "next" }}
-				{{ $embedPvP := cembed 
-					"title" "PvP"
-					"description" $descPvP
-					"color" $colorPurple
-				}}
-				{{ sendMessage nil $embedPvP }}
-			{{ else }}
-				{{ sendMessage nil $embedPvPmain }}
-			{{ end }}
+	{{ if .CmdArgs }}
+		{{ $arg := index .CmdArgs 0 | lower }}
+		{{ if eq $arg "next" }}
+			{{ $embed = $short }}
 		{{ end }}
-	{{ else }}
-		{{ sendMessage nil $embedPvPmain }}
 	{{ end }}
 {{ else }}
-	{{ $embedPvP := cembed 
-		"title" "PvP"
-		"image" (sdict "url" $hhImage)
-		"color" $colorPurple
-	}}
-	{{ sendMessage nil $embedPvP }}
+	{{ $embed = $basic }}
 {{ end }}
+
+{{ $embed.Set "title" "PVP" }}
+{{ $embed.Set "color" 5793266 }}
+{{ sendMessage nil (cembed $embed) }}
