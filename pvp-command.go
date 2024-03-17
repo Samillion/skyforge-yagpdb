@@ -32,8 +32,8 @@
 		{{ else if and (le $hour 20) (gt $hour 17) }}
 			{{ $at = 20 }}
 		{{ end }}
-        {{ $map = "All" }}
-        {{ $post = true }}
+		{{ $map = "All" }}
+		{{ $post = true }}
 {{ else if and (le $hour 14) (lt $hour 17) }}
 	{{ $set := sdict 
 		"Monday" "10v10"
@@ -48,7 +48,7 @@
 	{{ end }}
 
 	{{ $at = 14 }}
-    {{ $post = true }}
+	{{ $post = true }}
 {{ else if and (le $hour 17) (lt $hour 20) }}
 	{{ $set := sdict 
 		"Monday" "5v5"
@@ -63,7 +63,7 @@
 	{{ end }}
 
 	{{ $at = 17 }}
-    {{ $post = true }}
+	{{ $post = true }}
 {{ else if and (le $hour 20) (gt $hour 17) }}
 	{{ $set := sdict 
 		"Monday" "3v3"
@@ -78,9 +78,9 @@
 	{{ end }}
 
 	{{ $at = 20 }}
-    {{ $post = true }}
+	{{ $post = true }}
 {{ else }}
-    {{ $map = "Not set" }}
+	{{ $map = "Not set" }}
 {{ end }}
 
 {{ $onTime := newDate $time.Year 0 0 $at 0 0 $tz }}
@@ -114,6 +114,6 @@
 	{{ $embed = $basic }}
 {{ end }}
 
-{{ $embed.Set "title" "PVP" }}
+{{ $embed.Set "title" (print "PvP" " (" (upper $region) ")") }}
 {{ $embed.Set "color" 5793266 }}
 {{ sendMessage nil (cembed $embed) }}
