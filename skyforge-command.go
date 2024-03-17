@@ -1,5 +1,3 @@
-{{ $args := .CmdArgs }}
-
 {{ $options := sdict 
 	"weapons" (sdict 
 		"title" "Weapon Recommendations"
@@ -67,14 +65,15 @@
 {{ $builds := cslice "dps" "support" "tank" "companion" "comp" "pvp" }}
 
 {{ $catList := "" }}
-{{ range $category }}{{- $catList = print $catList "- " . "\n" -}}{{- end }}
+{{ range $category }}{{- $catList = print $catList "- " (title .) "\n" -}}{{- end }}
 {{ $main := sdict "title" "Options" "description" $catList }}
 
 {{ $buildList := "" }}
-{{ range $builds }}{{- $buildList = print $buildList "- " . "\n" -}}{{- end }}
+{{ range $builds }}{{- $buildList = print $buildList "- " (title .) "\n" -}}{{- end }}
 {{ $build := sdict "title" "Build Options" "description" $buildList }}
 
 {{ $embed := $main }}
+{{ $args := .CmdArgs }}
 {{ $gold := 16771846 }}
 
 {{ if (ge (len $args) 1) }}
@@ -85,7 +84,7 @@
 			{{ $embed.Set "color" $gold }}
 		{{ else if eq $arg "build" }}
 			{{ $embed = $build }}
-			{{ if eq (len $args) 2 }}
+			{{ if ge (len $args) 2 }}
 				{{ $role := index .CmdArgs 1 | lower }}
 				{{ $role = reReplace "companion" $role "comp" }}
 				{{ if $roles.HasKey $role }}
@@ -97,6 +96,4 @@
 	{{ end }}
 {{ end }}
 
-{{ if $embed }}
-	{{ sendMessage nil (cembed $embed) }}
-{{ end }}
+{{ sendMessage nil (cembed $embed) }}
