@@ -19,25 +19,19 @@ I've created custom commands that will provide useful information on Discord abo
 
 To use any of the commands here, first you'll need to add [YAGPDB bot](https://yagpdb.xyz/) to your Discord server. They provide detailed documentation on how to get started with the bot [here](https://docs.yagpdb.xyz/getting-started).
 
-### Important
-All the infromation you'd need to install and run these commands are listed below, but please make sure to read each section **fully and thoroughly** before adding any of the commands to your Discord server.
+> [!IMPORTANT]
+> All the infromation you'd need to install and run these commands are listed below, so please make sure to read each section **fully and thoroughly** before adding any of the commands to your Discord server.
 
 ## Contributors & Translators
 This project was started by Sam Sinner and Leo Scrame.
 
-**Contributors:**
-- Laama Laamanen
-- Zanzuro Mizoru
-- Reinna Sigma
-- Istani Revenant
-- Nova Char
-
-**Translators:**
-- DE: Leo Scrame
-- FR: Jynn Zemxil
-- QA: Phiozof Barophilo
-- QA: Sky Darcancia
-- QA: Shocobo Kurochi
+| Contributors | Translators |
+| ------ | ------ |
+| Laama Laamanen | DE: Leo Scrame |
+| Zanzuro Mizoru | FR: Jynn Zemxil |
+| Reinna Sigma | QA: Phiozof Barophilo |
+| Istani Revenant | QA: Sky Darcancia |
+| Nova Char | QA: Shocobo Kurochi |
 
 # Skyforge Command
 This command will output the relevant data about the MMO game Skyforge with the following options:
@@ -106,8 +100,8 @@ Here is a preview of the command `-pvp`:
 
 ![image](https://github.com/Samillion/skyforge-yagpdb/assets/17427046/f0d61e79-e39c-46e5-8f99-3e0b4bd07c91)
 
-### IMPORTANT (for PvP Command)
-If you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
+> [!IMPORTANT]
+> For the PvP Command, if you are playing the game on NA server, change the region from `EU` to `NA` in the first code line.
 
 So the result would be:
 ```go
