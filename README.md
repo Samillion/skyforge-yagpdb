@@ -1,4 +1,4 @@
-# Skyforge-YAGPDB
+## Skyforge-YAGPDB
 - [Overview](#overview)
 - [Contributors & Translators](#contributors--translators)
 - [Skyforge Command](#skyforge-command)
@@ -11,7 +11,7 @@
 - [Skyforge Command (DE)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations#skyforge-de-command)
 - [Skyforge Command (FR)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations#skyforge-fr-command)
 
-# Overview
+## Overview
 I've created custom commands that will provide useful information on Discord about the MMO game [Skyforge](https://sf.my.games/en) using YAGPDB Bot [Custom Commands](https://docs.yagpdb.xyz/commands/custom-commands) feature.
 
 - Skyforge command outputs many useful information for players
@@ -33,7 +33,7 @@ This project was started by Sam Sinner and Leo Scrame.
 | Istani Revenant | QA: Sky Darcancia |
 | Nova Char | QA: Shocobo Kurochi |
 
-# Skyforge Command
+## Skyforge Command
 This command will output the relevant data about the MMO game Skyforge with the following options:
 ```
 -skyforge
@@ -73,7 +73,7 @@ Here is a preview of the command `-skyforge`:
 
 ![image](https://github.com/Samillion/skyforge-yagpdb/assets/17427046/390399fa-490a-4532-9a39-deac233d4458)
 
-# PvP Command
+## PvP Command
 This command will output data relevant to PvP Happy Hours, schedule and active maps with the following options:
 ```
 -pvp
@@ -108,11 +108,8 @@ So the result would be:
 {{ $region := "NA" }}
 ```
 
-# Disclaimer
+## Disclaimer
 All the information provided by `-skyforge` and the other commands is voluntary effort, not official. It is based entirely on players testing, so result may vary depending on changes in the future. It is merely meant to guide you in the correct direction.
 
-# License
+## License
 Feel free to use, copy, modify or even take credit for the code as you please, just don't sell it or charge anyone. Let all use it as they like for free.
-
-# Contact
-If there are any issues, either open a ticket in this repository or contact me on Discord: `samsinner.`
