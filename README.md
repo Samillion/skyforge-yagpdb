@@ -5,7 +5,6 @@
 - [PvP Command](#pvp-command)
 - [Disclaimer](#disclaimer)
 - [License](#license)
-- [Contact](#contact)
 
 ### Translations
 - [Skyforge Command (DE)](https://github.com/Samillion/skyforge-yagpdb/tree/main/translations#skyforge-de-command)
